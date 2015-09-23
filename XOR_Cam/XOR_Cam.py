@@ -72,24 +72,30 @@ for line in Vlines:
                 new_gates.append(
                     XOR_model.replace("in_1", port_in_1).replace("in_2", port_in_2).replace("out", port_out))
 
-print new_gates
 
 # -> replace the output/input name in  zone, add X_index
 with open(Camfile, 'r') as infile:
     inV = infile.read().replace('endmodule', '')
     Vlines = inV.split(';\n')
+# Vlines[4] += Vlines[4] + '\n'
 for x in inputs[0]:
-    Vlines[1].replace(str(x), str(x) + "_new")
+    Vlines[1] = Vlines[1].replace(str(x)+',', str(x) + '_new,')
+    Vlines[4] += ',' + x
+Vlines[1] = Vlines[1].strip(';') + '_new'
 for y in outputs:
-    Vlines[3].replace(str(y), str(y) + "_new")
+    Vlines[3] = Vlines[3].replace(str(y) + ',', str(y) + "_new,")
+    Vlines[4] += ',' + y
+Vlines[3] = Vlines[3].strip(';') + '_new'
 for z in X_inputs:
     Vlines[2] = Vlines[2] + "," + z
+
 for i in range(0, len(Vlines)):
     Vlines[i] += ';\n'
+
 Vlines[-1] = ''
 for gates in new_gates:
     Vlines.append('\n' + gates)
-
+Vlines.append('\n' + 'endmodule')
 for new_lines in Vlines:
     with open("test.v", 'a') as outfile:
         outfile.write(new_lines)
