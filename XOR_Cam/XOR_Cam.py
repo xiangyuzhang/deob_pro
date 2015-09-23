@@ -1,8 +1,19 @@
 __author__ = 'xiangyuzhang'
 
 import re
+import argparse
+import os
+import sys
+parser = argparse.ArgumentParser(usage='python XOR_Cam.py [-h] <cam.v> ]', description='This program will use cam.v to generate a evener harder circuit.',)
+parser.add_argument('cam.v>', help='input cam circuit that will be made harder')
+args = parser.parse_args()
+camIn = sys.argv[1]
+camInPath = os.path.abspath(camIn)
 
-Camfile = "c432-mux4-1.v"
+if not os.path.isfile(camInPath):
+    print 'Invalid cam circuit file!!!!\n'
+
+Camfile = camInPath
 varIndexDict = {}
 varIndex = 1
 posIndex = []  # store integer indexes of pos to return
@@ -96,8 +107,11 @@ Vlines[-1] = ''
 for gates in new_gates:
     Vlines.append('\n' + gates)
 Vlines.append('\n' + 'endmodule')
+
+outfile_name = camIn.strip('.v') + '-XOR.v'
+
 for new_lines in Vlines:
-    with open("test.v", 'a') as outfile:
+    with open(outfile_name, 'a') as outfile:
         outfile.write(new_lines)
 
-# -> add new gates
+
