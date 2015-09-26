@@ -58,8 +58,7 @@ with open(Camfile, 'r') as infile:
 
 for line in Vlines:
     line = line.replace('\n', '')
-    if line != '' and line[
-        0] != '/' and not 'module' in line and not 'output' in line and not 'input' in line and not 'wire' in line:
+    if line != '' and line[0] != '/' and not 'module' in line and not 'output' in line and not 'input' in line and not 'wire' in line:
         for out in outputs:
             if out in re.findall(reg, line):
                 port_in_1 = "X_" + str(X_index)

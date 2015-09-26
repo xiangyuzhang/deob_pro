@@ -112,7 +112,7 @@ class DissectCkt:
         initSatLog = origCkt+'-1stMtr.log'
         #satCmmd = 'minisat ' + firstMtrCnf + ' ' + initSatLog
         #if more details about SAT needed, uncomment above line and comment next line
-        satCmmd='minisat '+firstMtrCnf+' '+initSatLog+' > nonIncreIterationInfo.log'
+        satCmmd='minisat '+firstMtrCnf+' '+initSatLog+' '
         print '\n',satCmmd,'\n'
         satTime1=time.time()
         satProc = call(satCmmd, shell=True)
@@ -182,7 +182,7 @@ class DissectCkt:
             conSatLog = compCkt+'-cons.log'                 
             #satCmmd = 'minisat ' + cnFile + ' ' + satLog
             #uncomment above line and comment next line to get more info on SAT
-            satCmmd = '\nminisat ' + consCNFile + ' ' + conSatLog + ' > nonIncreIterationInfo.log'
+            satCmmd = '\nminisat ' + consCNFile + ' ' + conSatLog
             print satCmmd
             satTime3 = time.time()
             satProc = call(satCmmd, shell=True)
@@ -266,7 +266,7 @@ class DissectCkt:
             conSatLog = OracPath+'-wPI.log'
             #satCmmd = 'minisat ' + OracNFile + ' ' + satLog
             #if more details about SAT needed, uncomment above line and comment next line
-            satCmmd = '\nminisat ' + consCNFile + ' ' + conSatLog + ' >> genNewPO.log'
+            satCmmd = '\nminisat ' + consCNFile + ' ' + conSatLog
             print satCmmd,'\n'
             satTime5 = time.time()
             satProc = call(satCmmd, shell=True)
@@ -410,7 +410,7 @@ class DissectCkt:
             conSatLog = findSoluFile+'.log'                 
             #satCmmd = 'minisat ' + cnFile + ' ' + satLog
             #uncomment above line and comment next line to get more info on SAT
-            satCmmd = '\nminisat ' + findSoluCnf + ' ' + conSatLog + ' >> findSolution.log'
+            satCmmd = '\nminisat ' + findSoluCnf + ' ' + conSatLog + ' '
             print satCmmd, '\n'
             satTime7 = time.time()
             satProc = call(satCmmd, shell=True)
@@ -581,8 +581,10 @@ def rundecam():
         print "Solution found!"
     elif res == 0:
         print "System is malfunction!"
+        time.sleep(1000000000)
     else:
         print "BUG!"
+        time.sleep(1000000000)
     print 'Thank you!\n'
     #outfilepath = os.path.abspath(outfile)
     
