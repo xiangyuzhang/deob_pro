@@ -36,7 +36,7 @@ with open(Camfile, 'r') as infile:
 
 for line in Vlines:
     line = line.replace('\n', '')
-    if 'input' in line and not '//' in line:
+    if 'input' in line and '//' not in line:
         PIs = re.search(r'(?<=input )(.*)(?=$)', line).group().replace(' ', '').split(',')
         tmpPis = []
         for pi in PIs:
@@ -44,7 +44,7 @@ for line in Vlines:
             tmpPis.append(pi)
         inputs.append(tmpPis)
 
-    elif 'output' in line and not '//' in line:
+    elif 'output' in line and '//' not in line:
         POs = re.search(r'(?<=output )(.*)(?=$)', line).group().replace(' ', '').split(',')
         tmpPos = []
         for po in POs:
@@ -58,8 +58,7 @@ with open(Camfile, 'r') as infile:
 
 for line in Vlines:
     line = line.replace('\n', '')
-    if line != '' and line[
-        0] != '/' and not 'module' in line and not 'output' in line and not 'input' in line and not 'wire' in line:
+    if line != '' and line[0] != '/' and not 'module' in line and not 'output' in line and not 'input' in line and not 'wire' in line:
         for out in outputs:
             if out in re.findall(reg, line):
                 port_in_1 = "X_" + str(X_index)
@@ -69,19 +68,19 @@ for line in Vlines:
                 X_inputs.append(port_in_1)
                 if port_out not in new_outputs:
                     new_outputs.append(port_out)
-                new_gates.append(
-                    XOR_model.replace("in_1", port_in_1).replace("in_2", port_in_2).replace("out", port_out))
+                new_gates.append( XOR_model.replace("in_1", port_in_1).replace("in_2", port_in_2).replace("out", port_out))
+                outputs.remove(out)
         for ins in inputs[0]:
             if ins in re.findall(reg, line):
                 port_in_1 = "X_" + str(X_index)
                 port_in_2 = ins + "_new"
                 port_out = ins
-                X_index = X_index + 1
+                X_index += 1
                 X_inputs.append(port_in_1)
                 if port_in_2 not in new_inputs:
                     new_inputs.append(port_in_2)
-                new_gates.append(
-                    XOR_model.replace("in_1", port_in_1).replace("in_2", port_in_2).replace("out", port_out))
+                new_gates.append( XOR_model.replace("in_1", port_in_1).replace("in_2", port_in_2).replace("out", port_out))
+                inputs[0].remove(ins)
 
 
 # -> replace the output/input name in  zone, add X_index
