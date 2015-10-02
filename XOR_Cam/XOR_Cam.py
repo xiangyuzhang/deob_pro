@@ -25,10 +25,8 @@ port_out = ""
 XOR_model = "xor2 gate( .a(in_1), .b(in_2), .O(out) );"
 content = []  # contain the refreshed codes
 inputs = []
-inputs_copy = []
 new_inputs = []  # used to contain the replaced inputs
 outputs = []
-outputs_copy = []
 new_outputs = []  # used to contain the replaced outputs
 new_gates = []  # used to contain the new xor gated
 X_inputs = []  # used to store the new input
@@ -57,15 +55,11 @@ for line in Vlines:
 with open(Camfile, 'r') as infile:
     inV = infile.read()
     Vlines = inV.split(';\n')
-# duplicate inputs and outputs
-
-inputs_copy = inputs[0][:]
-outputs_copy = outputs[:]
 
 for line in Vlines:
     line = line.replace('\n', '')
     if line != '' and line[0] != '/' and not 'module' in line and not 'output' in line and not 'input' in line and not 'wire' in line:
-        for out in outputs_copy:
+        for out in outputs:
             if out in re.findall(reg, line):
                 port_in_1 = "X_" + str(X_index)
                 port_in_2 = out
@@ -75,8 +69,8 @@ for line in Vlines:
                 if port_out not in new_outputs:
                     new_outputs.append(port_out)
                 new_gates.append( XOR_model.replace("in_1", port_in_1).replace("in_2", port_in_2).replace("out", port_out))
-                outputs_copy.remove(out)
-        for ins in inputs_copy:
+                outputs.remove(out)
+        for ins in inputs[0]:
             if ins in re.findall(reg, line):
                 port_in_1 = "X_" + str(X_index)
                 port_in_2 = ins + "_new"
@@ -86,8 +80,8 @@ for line in Vlines:
                 if port_in_2 not in new_inputs:
                     new_inputs.append(port_in_2)
                 new_gates.append( XOR_model.replace("in_1", port_in_1).replace("in_2", port_in_2).replace("out", port_out))
-                inputs_copy.remove(ins)
-                # print len(inputs[0])
+                inputs[0].remove(ins)
+
 
 # -> replace the output/input name in  zone, add X_index
 with open(Camfile, 'r') as infile:
