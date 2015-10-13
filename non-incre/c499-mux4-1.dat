@@ -1,9 +1,0 @@
-#iterationNumber	varNumber	clauseNumber	itertionTime
-1	551	1737	0.0285
-2	1069	3247	0.0257
-3	1587	4753	0.0301
-4	2105	6255	0.0378
-5	2623	7753	0.0746
-The last iteration is UNSAT.
-The total time used (including file parse time) is
-0.2248 s
