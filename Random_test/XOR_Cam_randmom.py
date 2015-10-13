@@ -122,7 +122,7 @@ for line in Vlines:
 
 for i in replaced_PIPO:
     with open("Candidate", "a") as outfile:
-        outfile.write(i + " ")
+        outfile.write(i + "    ")
 with open("Candidate", "a") as outfile:
     outfile.write("\n")
 # from the following block I collect all the XOR gates
