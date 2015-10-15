@@ -142,7 +142,8 @@ for line in Vlines:
                 X_index += 1
                 X_inputs.append(port_in_1)
                 gates_info.append(XOR_model.replace("in_1", port_in_1).replace("in_2", port_in_2).replace("out", port_out))
-                replaced_PIPO.remove(candidate)
+                temp = replaced_PIPO.index(candidate)
+                replaced_PIPO[temp] = "NULL"
             elif candidate in re.findall(reg, line)[-2:]: # if target in this gate and is a output
 
                 gateline.append(line)
@@ -152,7 +153,8 @@ for line in Vlines:
                 X_index += 1
                 X_inputs.append(port_in_1)
                 gates_info.append(XOR_model.replace("in_1", port_in_1).replace("in_2", port_in_2).replace("out", port_out))
-                replaced_PIPO.remove(candidate)
+                temp = replaced_PIPO.index(candidate)
+                replaced_PIPO[temp] = "NULL"
                 # print len(inputs[0])
 
 
@@ -162,7 +164,10 @@ with open(Camfile, 'r') as infile:
     inV = infile.read()
     Vlines = inV.replace('\n', '').split(';')
 
-
+if (len(PI_info) == 0):
+    PI_info = Vlines[1]
+if (len(PO_info) == 0):
+    PO_info = Vlines[3]
 
 Vlines[2] = Vlines[2].strip(";")
 CB = Vlines[2]
@@ -171,7 +176,7 @@ for X in range(1, X_index):
 CB+=';'
 PI_info = PI_info[:-1]
 PO_info = PO_info[:-1]
-content.append(Vlines[0] + ";\n")
+content.append(Vlines[0] + ";\n\n")
 content.append(PI_info + ";\n\n")
 content.append(CB + "\n\n")
 content.append(PO_info + ";\n\n")
