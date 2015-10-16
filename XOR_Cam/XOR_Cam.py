@@ -4,6 +4,7 @@ import re
 import argparse
 import os
 import sys
+from random import*
 parser = argparse.ArgumentParser(usage='python XOR_Cam.py [-h] <cam.v> ]', description='This program will use cam.v to generate a evener harder circuit.',)
 parser.add_argument('cam.v>', help='input cam circuit that will be made harder')
 args = parser.parse_args()
