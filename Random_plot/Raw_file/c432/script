@@ -11,7 +11,7 @@ set xlabel font 'Times-Roman,25'
 set xrange[0:50]
 set xlabel 'Number of Index'
 set ylabel 'Runtime(s)' 
-set xlabel 
+
 plot 'time_info_original' using (4 *$1):2 w lp pt 0 ps 1 lc -1 lw 2 title 'Baseline','time_info_XOR' using 1:2 w lp pt 0 ps 1 lc 2 lw 2 title 'XOR'
 
 

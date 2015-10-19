@@ -7,7 +7,10 @@ input N1,N5,N9,N13,N17_new,N21,N25,N29,N33,N37,
       N121,N125,N129,N130,N131,N132,N133,N134,N135,N136,
       N137;
 
-input p1,p2,p3,p4,X_1,X_2,X_3,X_4,X_5,X_6;
+input p1,p2,p3,p4；
+                    //MUX_allow(00,01,10) ;
+input X_1,X_2,X_3,X_4,X_5,X_6；
+                   //XOR_allow(NONE) ;
 
 
 output N724_new,N725,N726_new,N727_new,N728,N729,N730,N731,N732,N733,
