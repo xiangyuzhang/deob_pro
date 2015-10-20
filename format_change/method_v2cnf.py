@@ -23,12 +23,13 @@ def v2cnf(camInV, startIndex):
     gateCnt = 0
 
     for line in Vlines:
-
-        if 'input' in line and not '//' in line:
-            line = line.replace('\n', '')
-            # print 'This is the line: ', line
-            # print 'This is the fucker: ', re.search(r'(?<=input )(.*)(?=$)', line)
-            PIs=re.search(r'(?<=input)(.*)(?=$)', line).group().replace(' ','').split(',')
+        line = line.replace('\n', '')
+        if 'input' in line:
+            if "RE__" in line:    # here, I need to assign forbidden bits!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+                line = line[:line.find('/')]
+            else:
+                line = line.replace('\n','')
+            PIs=re.search(r'(?<=input )(.*)(?=$)', line).group().replace(' ','').replace(';', '').split(',')
             tmpPis = []
             for pi in PIs:
                 pi = pi.replace('\\','').replace('[','').replace(']','')
@@ -38,8 +39,8 @@ def v2cnf(camInV, startIndex):
                 tmpPis.append(varIndex)
                 varIndex += 1
             inputs.append(tmpPis)
-        elif 'output' in line and not '//' in line:
-            line = line.replace('\n', '')
+
+        elif 'output' in line:
             POs=re.search(r'(?<=output )(.*)(?=$)', line).group().replace(' ','').split(',')
             for po in POs:
                 po = po.replace('\\','').replace('[','').replace(']','')
@@ -48,16 +49,13 @@ def v2cnf(camInV, startIndex):
                 posIndex.append(varIndex)
                 #poVars.append(po)
                 varIndex += 1
-            print ''
-        elif 'wire' in line and not '//' in line:
-            line = line.replace('\n', '')
+        elif 'wire' in line:
             wires=re.search(r'(?<=wire )(.*)(?=$)', line).group().replace(' ','').split(',')
             for w in wires:
                 varIndexDict[w] = varIndex
                 #intVarDict[varIndex] = w
                 varIndex += 1
-        elif line!='' and line[0]!='/' and not 'module' in line:
-            line = line.replace('\n', '')
+        elif line!='' and line[0]!='/' and not 'module'  in line:
             #print line
             line = line.replace(' ','')
             gate = re.search(r'^(.*)(?=g\S+\(\.)', line).group().strip('1234567890')
@@ -77,9 +75,7 @@ def v2cnf(camInV, startIndex):
             for line in cnfLines:
                 cnFile.append(line)
             gateCnt += 1
-    # line1 = 'This is generation for ' + camInV +'\n'
-    # cnFile.append(line1)
-    camVarNum = varIndex-1
+    camVarNum = varIndex-1 #total number of nodes in original ckt
     camCNFile = cnFile[:]
     # print 'This is PI: ', inputs[0]  # input[0] is a list with int elements
     return camCNFile, inputs, posIndex, camVarNum

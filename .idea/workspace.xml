@@ -1,18 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="4a3272c3-5717-44ed-b16a-dffd77198a7e" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/debugger/Candidate" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/debugger/c7552-abcmap-fmt.v" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/debugger/c7552-mux4-1.v" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/debugger/c880-mux4-1.v" afterPath="" />
-    </list>
-    <list id="7c8f647a-c2bf-4b37-ad21-b3664c4bdbd4" name="New changelist" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/XOR_Cam/XOR_Cam.py" afterPath="$PROJECT_DIR$/XOR_Cam/XOR_Cam.py" />
+    <list default="true" id="4a3272c3-5717-44ed-b16a-dffd77198a7e" name="Default" comment="标准版本的电路完成了，现在需考虑加上forbidden bits。&#10;以前的bug：因为'/'">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/format_change/Main.o" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/format_change/SimpSolver.o" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/format_change/minisat-incre-simp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/format_change/EC_shell.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/format_change/Main.cc" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/format_change/Makefile" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/format_change/SimpSolver.cc" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/format_change/SimpSolver.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/format_change/c499-mux4-1-XOR-2-revised-norm.v" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/format_change/c7552-abcmap-fmt.v" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/format_change/c7552-mux4-201.v" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/format_change/decam-incre.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/format_change/depend.mk" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/format_change/finalSolu.log" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/format_change/testforbid_single.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/format_change/tmpIn.cnf" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/format_change/c499-abcmap-fmt-wPI.cnf" afterPath="$PROJECT_DIR$/format_change/c499-abcmap-fmt-wPI.cnf" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/format_change/c499-abcmap-fmt.v" afterPath="$PROJECT_DIR$/format_change/c499-abcmap-fmt.v" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/format_change/c499-mux4-1-XOR-2-revised-1stMtr.cnf" afterPath="$PROJECT_DIR$/format_change/c499-mux4-1-XOR-2-revised-1stMtr.cnf" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/format_change/c499-mux4-1-XOR-2-revised-_findSolu.cnf" afterPath="$PROJECT_DIR$/format_change/c499-mux4-1-XOR-2-revised-_findSolu.cnf" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/format_change/c499-mux4-1-XOR-2-revised-comp-cons.cnf" afterPath="$PROJECT_DIR$/format_change/c499-mux4-1-XOR-2-revised-comp-cons.cnf" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/format_change/findSolution.log" afterPath="$PROJECT_DIR$/format_change/findSolution.log" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/format_change/genMtrs.py" afterPath="$PROJECT_DIR$/format_change/genMtrs.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/format_change/genNewPO.log" afterPath="$PROJECT_DIR$/format_change/genNewPO.log" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/format_change/method_v2cnf.py" afterPath="$PROJECT_DIR$/format_change/method_v2cnf.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/format_change/nonIncreIterationInfo.log" afterPath="$PROJECT_DIR$/format_change/nonIncreIterationInfo.log" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/format_change/tmpSAT.log" afterPath="$PROJECT_DIR$/format_change/tmpSAT.log" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
+    <list id="7c8f647a-c2bf-4b37-ad21-b3664c4bdbd4" name="New changelist" comment="" />
     <ignored path="deob_pro.iws" />
     <ignored path=".idea/workspace.xml" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -32,63 +51,63 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="Candidate_apply.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/debugger/Candidate_apply.py">
+      <file leaf-file-name="decam-v5-cmmdline.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/format_change/decam-v5-cmmdline.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="35" column="0" selection-start-line="35" selection-start-column="0" selection-end-line="35" selection-end-column="15" />
+            <state vertical-scroll-proportion="0.3168">
+              <caret line="90" column="0" selection-start-line="90" selection-start-column="0" selection-end-line="90" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="XOR_Cam_randmom.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/XOR_random/XOR_Cam_randmom.py">
+      <file leaf-file-name="genMtrs.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/format_change/genMtrs.py">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="29" column="15" selection-start-line="29" selection-start-column="15" selection-end-line="29" selection-end-column="15" />
+              <caret line="484" column="0" selection-start-line="484" selection-start-column="0" selection-end-line="484" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="c7552-random-runtime.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Random_plot/c2670/c7552-random-runtime.py">
+      <file leaf-file-name="method_v2cnf.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/format_change/method_v2cnf.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.41411042">
-              <caret line="20" column="19" selection-start-line="20" selection-start-column="19" selection-end-line="20" selection-end-column="19" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="27" column="0" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="test_script.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/debugger/test_script.py">
+      <file leaf-file-name="c499-abcmap-fmt.v" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/format_change/c499-abcmap-fmt.v">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="22" column="6" selection-start-line="22" selection-start-column="6" selection-end-line="22" selection-end-column="6" />
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="EC_lib.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/format_change/EC_lib.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="47" column="0" selection-start-line="47" selection-start-column="0" selection-end-line="47" selection-end-column="0" />
               <folding>
-                <element signature="e#29#56#0" expanded="true" />
+                <element signature="e#2#27#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Bug_finder.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/debugger/Bug_finder.py">
+      <file leaf-file-name="c499-mux4-1-XOR-2-revised.v" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/format_change/c499-mux4-1-XOR-2-revised.v">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="84" column="0" selection-start-line="84" selection-start-column="0" selection-end-line="84" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="test.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/debugger/test.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="69" column="8" selection-start-line="69" selection-start-column="8" selection-end-line="69" selection-end-column="14" />
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -159,6 +178,10 @@
         <option value="$PROJECT_DIR$/debugger/test.py" />
         <option value="$PROJECT_DIR$/debugger/Candidate_apply.py" />
         <option value="$PROJECT_DIR$/XOR_random/XOR_Cam_randmom.py" />
+        <option value="$PROJECT_DIR$/format_change/c499-mux4-1-XOR-2-revised-norm.v" />
+        <option value="$PROJECT_DIR$/format_change/genMtrs.py" />
+        <option value="$PROJECT_DIR$/format_change/method_v2cnf.py" />
+        <option value="$PROJECT_DIR$/format_change/c499-abcmap-fmt.v" />
       </list>
     </option>
   </component>
@@ -222,14 +245,14 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="Random_plot" />
+              <option name="myItemId" value="format_change" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scratches" />
       <pane id="Scope" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -242,96 +265,28 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/format_change" />
       <recent name="$PROJECT_DIR$/debugger" />
       <recent name="$PROJECT_DIR$/Random_test" />
       <recent name="$PROJECT_DIR$/Random_plot/c432" />
       <recent name="$PROJECT_DIR$/non-incre" />
-      <recent name="$PROJECT_DIR$/XOR_random" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.test">
-    <configuration default="false" name="XOR_Cam_randmom" type="PythonConfigurationType" factoryName="Python" temporary="true">
+  <component name="RunManager" selected="Python.decam-v5-cmmdline">
+    <configuration default="false" name="decam-v5-cmmdline" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/XOR_random" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/format_change" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="deob_pro" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/XOR_random/XOR_Cam_randmom.py" />
-      <option name="PARAMETERS" value="c432-mux4-1.v 0" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <method />
-    </configuration>
-    <configuration default="false" name="random_test" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Random_test" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="deob_pro" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Random_test/random_test.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <method />
-    </configuration>
-    <configuration default="false" name="Candidate_apply" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/debugger" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="deob_pro" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/debugger/Candidate_apply.py" />
-      <option name="PARAMETERS" value="c880-mux4-1.v Candidate 52" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <method />
-    </configuration>
-    <configuration default="false" name="test_script" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/debugger" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="deob_pro" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/debugger/test_script.py" />
-      <option name="PARAMETERS" value="c880-abcmap-fmt.v c880-mux4-1.v 52" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <method />
-    </configuration>
-    <configuration default="false" name="test" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/debugger" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="deob_pro" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/debugger/test.py" />
-      <option name="PARAMETERS" value="" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/format_change/decam-v5-cmmdline.py" />
+      <option name="PARAMETERS" value="c499-abcmap-fmt.v c499-mux4-1-XOR-2-revised-norm.v" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <method />
     </configuration>
@@ -457,20 +412,12 @@
       <option name="USE_KEYWORD" value="false" />
       <method />
     </configuration>
-    <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="Python.XOR_Cam_randmom" />
-      <item index="1" class="java.lang.String" itemvalue="Python.random_test" />
-      <item index="2" class="java.lang.String" itemvalue="Python.Candidate_apply" />
-      <item index="3" class="java.lang.String" itemvalue="Python.test_script" />
-      <item index="4" class="java.lang.String" itemvalue="Python.test" />
+    <list size="1">
+      <item index="0" class="java.lang.String" itemvalue="Python.decam-v5-cmmdline" />
     </list>
     <recent_temporary>
-      <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Python.test" />
-        <item index="1" class="java.lang.String" itemvalue="Python.test_script" />
-        <item index="2" class="java.lang.String" itemvalue="Python.Candidate_apply" />
-        <item index="3" class="java.lang.String" itemvalue="Python.random_test" />
-        <item index="4" class="java.lang.String" itemvalue="Python.XOR_Cam_randmom" />
+      <list size="1">
+        <item index="0" class="java.lang.String" itemvalue="Python.decam-v5-cmmdline" />
       </list>
     </recent_temporary>
   </component>
@@ -577,25 +524,25 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-1920" y="-246" width="1920" height="1080" extended-state="0" />
+    <frame x="-1920" y="-246" width="1920" height="1080" extended-state="6" />
     <editor active="false" />
     <layout>
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32673267" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32871288" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32608697" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32806325" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2022117" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33960396" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2022117" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3389328" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3277849" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.35841584" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3577075" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32806325" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
@@ -626,7 +573,8 @@
     <MESSAGE value="加入了随机选择输出的功能 并且完成了大规模测试的脚本 接下来要上传到服务器进行测试" />
     <MESSAGE value="增加了强大的bug_finder和candidate_apply程序，并且修复了之前的bug" />
     <MESSAGE value="又发现了一个bug哈哈，现在c7552能跑了&#10;bug是reg" />
-    <option name="LAST_COMMIT_MESSAGE" value="又发现了一个bug哈哈，现在c7552能跑了&#10;bug是reg" />
+    <MESSAGE value="标准版本的电路完成了，现在需考虑加上forbidden bits。&#10;以前的bug：因为'/'" />
+    <option name="LAST_COMMIT_MESSAGE" value="标准版本的电路完成了，现在需考虑加上forbidden bits。&#10;以前的bug：因为'/'" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -666,6 +614,61 @@
           <line>72</line>
           <option name="timeStamp" value="148" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="python-line">
+          <url>file://$PROJECT_DIR$/format_change/EC_lib.py</url>
+          <line>56</line>
+          <option name="timeStamp" value="168" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="python-line">
+          <url>file://$PROJECT_DIR$/format_change/EC_lib.py</url>
+          <line>47</line>
+          <option name="timeStamp" value="220" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="python-line">
+          <url>file://$PROJECT_DIR$/format_change/method_v2cnf.py</url>
+          <line>27</line>
+          <option name="timeStamp" value="221" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="python-line">
+          <url>file://$PROJECT_DIR$/format_change/method_v2cnf.py</url>
+          <line>32</line>
+          <option name="timeStamp" value="222" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="python-line">
+          <url>file://$PROJECT_DIR$/format_change/method_v2cnf.py</url>
+          <line>31</line>
+          <option name="timeStamp" value="223" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="python-line">
+          <url>file://$PROJECT_DIR$/format_change/method_v2cnf.py</url>
+          <line>33</line>
+          <option name="timeStamp" value="224" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="python-line">
+          <url>file://$PROJECT_DIR$/format_change/method_v2cnf.py</url>
+          <line>34</line>
+          <option name="timeStamp" value="225" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="python-line">
+          <url>file://$PROJECT_DIR$/format_change/method_v2cnf.py</url>
+          <line>35</line>
+          <option name="timeStamp" value="226" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="python-line">
+          <url>file://$PROJECT_DIR$/format_change/method_v2cnf.py</url>
+          <line>38</line>
+          <option name="timeStamp" value="227" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="python-line">
+          <url>file://$PROJECT_DIR$/format_change/method_v2cnf.py</url>
+          <line>39</line>
+          <option name="timeStamp" value="228" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="python-line">
+          <url>file://$PROJECT_DIR$/format_change/method_v2cnf.py</url>
+          <line>40</line>
+          <option name="timeStamp" value="229" />
+        </line-breakpoint>
       </breakpoints>
       <default-breakpoints>
         <breakpoint type="python-exception">
@@ -674,46 +677,50 @@
           </properties>
         </breakpoint>
       </default-breakpoints>
-      <option name="time" value="151" />
+      <option name="time" value="230" />
     </breakpoint-manager>
     <watches-manager>
       <configuration name="PythonConfigurationType">
+        <watch expression="buf_processed[i]" language="Python" />
+        <watch expression="varIndexDict[buf_processed[i]]" language="Python" />
         <watch expression="line" language="Python" />
-        <watch expression="random_sequence" language="Python" />
-        <watch expression="line_new" language="Python" />
-        <watch expression="new" language="Python" />
-        <watch expression="temp" language="Python" />
-        <watch expression="line[1]" language="Python" />
-        <watch expression="re.findall(reg, line)" language="Python" />
+        <watch expression="varIndexDict" language="Python" />
+        <watch expression="camInV" language="Python" />
       </configuration>
     </watches-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/simp_incre_forbid/increIterationSolution.log">
+    <entry file="file://$PROJECT_DIR$/debugger/Candidate_apply.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/simp_incre_forbid/finalSolu.log">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.49323016">
-          <caret line="1" column="2246" selection-start-line="1" selection-start-column="2246" selection-end-line="1" selection-end-column="2246" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/simp_incre_forbid/finalSolu.cnf">
+    <entry file="file://$PROJECT_DIR$/debugger/test_script.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <caret line="22" column="6" selection-start-line="22" selection-start-column="6" selection-end-line="22" selection-end-column="6" />
+          <folding>
+            <element signature="e#29#56#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/simp_incre_forbid/checking_imp_loop.py">
+    <entry file="file://$PROJECT_DIR$/debugger/Bug_finder.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="37" column="0" selection-start-line="37" selection-start-column="0" selection-end-line="37" selection-end-column="0" />
+          <caret line="84" column="0" selection-start-line="84" selection-start-column="0" selection-end-line="84" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/debugger/test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="69" column="8" selection-start-line="69" selection-start-column="8" selection-end-line="69" selection-end-column="14" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -734,32 +741,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$APPLICATION_HOME_DIR$/helpers/pydev/pydevd.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.33170733">
-          <caret line="1777" column="0" selection-start-line="1777" selection-start-column="0" selection-end-line="1777" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/XOR_random/tem.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="40.15314">
           <caret line="7" column="354698" selection-start-line="7" selection-start-column="354698" selection-end-line="7" selection-end-column="354698" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/non-incre/genMtrs.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.33226836">
-          <caret line="1262" column="95" selection-start-line="1262" selection-start-column="85" selection-end-line="1262" selection-end-column="95" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/non-incre/c432-mux4-1-XOR-10.v">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -770,45 +755,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/non-incre/c432-mux4-1.v">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.8723748">
-          <caret line="36" column="31" selection-start-line="36" selection-start-column="31" selection-end-line="36" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/c7552-random-runtime/c7552-random-runtime.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="71" column="99" selection-start-line="71" selection-start-column="99" selection-end-line="71" selection-end-column="99" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Random_plot/c432/c7552-random-runtime.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="31" column="0" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/non-incre/decam_loop.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5640244">
-          <caret line="37" column="35" selection-start-line="37" selection-start-column="35" selection-end-line="37" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/non-incre/decam-v5-cmmdline.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.7865854">
-          <caret line="596" column="0" selection-start-line="596" selection-start-column="0" selection-end-line="596" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Random_test/random_test.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.67741936">
-          <caret line="30" column="33" selection-start-line="30" selection-start-column="33" selection-end-line="30" selection-end-column="33" />
         </state>
       </provider>
     </entry>
@@ -833,21 +783,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Random_test/XOR_Cam_randmom.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.024193548">
-          <caret line="44" column="74" selection-start-line="44" selection-start-column="74" selection-end-line="44" selection-end-column="74" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Random_plot/c1355/c7552-random-runtime.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.8231707">
-          <caret line="56" column="42" selection-start-line="56" selection-start-column="42" selection-end-line="56" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Random_plot/c499/EC_result.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -869,20 +804,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Random_plot/c1355/c1355-mux4-1.v">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Random_plot/c2670/c2670-mux4-1.v">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.8231707">
-          <caret line="80" column="57" selection-start-line="80" selection-start-column="57" selection-end-line="80" selection-end-column="57" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Random_plot/c1908/c7552-random-runtime.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.8780488">
@@ -894,7 +815,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="14" column="53" selection-start-line="14" selection-start-column="53" selection-end-line="14" selection-end-column="53" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -902,7 +822,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="65" column="64" selection-start-line="65" selection-start-column="64" selection-end-line="65" selection-end-column="64" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -952,7 +871,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="80" column="28" selection-start-line="80" selection-start-column="28" selection-end-line="80" selection-end-column="28" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -960,7 +878,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="62" column="20" selection-start-line="62" selection-start-column="20" selection-end-line="62" selection-end-column="20" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -968,7 +885,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="21" column="17" selection-start-line="21" selection-start-column="17" selection-end-line="21" selection-end-column="17" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -976,7 +892,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="23" column="50" selection-start-line="23" selection-start-column="48" selection-end-line="23" selection-end-column="50" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1001,7 +916,7 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="22" column="6" selection-start-line="22" selection-start-column="6" selection-end-line="22" selection-end-column="6" />
           <folding>
-            <element signature="e#29#56#0" expanded="true" />
+            <element signature="e#29#56#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1014,18 +929,68 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/XOR_random/XOR_Cam_randmom.py">
+    <entry file="file://$PROJECT_DIR$/format_change/c499-mux4-1-XOR-2-revised-norm.v">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="29" column="15" selection-start-line="29" selection-start-column="15" selection-end-line="29" selection-end-column="15" />
+        <state vertical-scroll-proportion="5.6188927">
+          <caret line="230" column="44" selection-start-line="230" selection-start-column="44" selection-end-line="230" selection-end-column="44" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Random_plot/c2670/c7552-random-runtime.py">
+    <entry file="file://$APPLICATION_HOME_DIR$/helpers/pydev/pydevd.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.41411042">
-          <caret line="20" column="19" selection-start-line="20" selection-start-column="19" selection-end-line="20" selection-end-column="19" />
+        <state vertical-scroll-proportion="0.34244373">
+          <caret line="1777" column="0" selection-start-line="1777" selection-start-column="0" selection-end-line="1777" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/format_change/genMtrs.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="484" column="0" selection-start-line="484" selection-start-column="0" selection-end-line="484" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/format_change/EC_lib.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="47" column="0" selection-start-line="47" selection-start-column="0" selection-end-line="47" selection-end-column="0" />
+          <folding>
+            <element signature="e#2#27#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/format_change/c499-abcmap-fmt.v">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/format_change/method_v2cnf.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="27" column="0" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/format_change/c499-mux4-1-XOR-2-revised.v">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/format_change/decam-v5-cmmdline.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.3168">
+          <caret line="90" column="0" selection-start-line="90" selection-start-column="0" selection-end-line="90" selection-end-column="0" />
           <folding />
         </state>
       </provider>

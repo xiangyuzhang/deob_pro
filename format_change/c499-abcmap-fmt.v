@@ -1,14 +1,4 @@
-// Verilog
-// c499
-// Ninputs 41
-// Noutputs 32
-// NtotalGates 202
-// XOR2 104
-// AND2 40
-// NOT1 40
-// AND4 8
-// OR4 2
-// AND5 8
+
 
 module c499 (N1,N5,N9,N13,N17,N21,N25,N29,N33,N37,
              N41,N45,N49,N53,N57,N61,N65,N69,N73,N77,
