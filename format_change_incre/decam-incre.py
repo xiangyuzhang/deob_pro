@@ -10,7 +10,7 @@ import sys
 import time
 from subprocess import call, Popen, PIPE, STDOUT
 import argparse
-
+from completeset import completeset
 from genMtrs import *
 #from abcProc import *
 from grabNodes import *
@@ -63,7 +63,7 @@ class DissectCkt:
         self.baseCnfMtrLs = [] #stores basic miter cnf w/o assignments
         #there are commnet lines in self.baseCnfMtrLs
         self.camVarNum = 0 #total # of vars in orignal cam ckt
-
+        self.inputs = []
         self.MuxStyle = []
         self.newDupCkt = []
         #readline.set_completer_delims(' \t\n;')
@@ -110,6 +110,7 @@ class DissectCkt:
         # time.sleep(100)
         self.baseCnfMtrLs = cnfTup[0]
         inputsInt = cnfTup[1]
+        self.inputs = cnfTup[1]
         self.camPIndex = inputsInt[0]
         self.camCBindex = inputsInt[1]
         for i in inputsInt[2:]:
@@ -132,18 +133,26 @@ class DissectCkt:
 
     def initSolve(self, OracIn, CamIn, MuxStyle, forbitFlag):
         '''generates an initial pair of programming bit assignments, then generates an primary input vector that can distinguish them.'''
-
-        ''' 1. generate the oracle cnf '''
-        self._genOracCNF(OracIn)
-        ''' 2. generate the miter cnf '''
-        self._genCamCNF(CamIn, MuxStyle, forbitFlag)
-        with open(self.CamInPath,'r') as infile:
+        MuxStyle = []
+        with open(CamIn,'r') as infile:
             inV = infile.read()
             Vlines = inV.replace('\r','').split(';\n')
         for line in Vlines:
             if 'RE__ALLOW' in line:
                 Allow = line[line.find('ALLOW(')+6:line.find(')')].split(',')
-                self.MuxStyle.append(completeset(Allow))
+                print Allow
+                if len(completeset(Allow)) is not 0:
+                    self.MuxStyle.append(completeset(Allow))
+                    MuxStyle.append(completeset(Allow))
+                print self.MuxStyle
+
+        #time.sleep(111111)
+        ''' 1. generate the oracle cnf '''
+        self._genOracCNF(OracIn)
+        ''' 2. generate the miter cnf '''
+        self._genCamCNF(CamIn, MuxStyle, forbitFlag)
+
+
         print '\n--------------------------------------------------------'
         #print "Generating the first pair of programming bits ... ..."
         print "Evaluating the first PI verctor using SAT solver... ..."
@@ -478,7 +487,7 @@ class DissectCkt:
 
             #5. rule rule out illegal p-bit assignments (11s), add them to the first ckt module:
             for i in range(len(self.MuxStyle)):
-                soluCBline = CBconstrain(self.MuxStyle[i], self.inputs[i])
+                soluCBline = CBconstrain(self.MuxStyle[i], self.inputs[i+1])
                 print "This forbidden bits added in last step is: ", soluCBline
                 for j in soluCBline:
                     tmpCnfLs[0].append(j)

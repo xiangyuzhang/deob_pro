@@ -1,6 +1,6 @@
 __author__ = 'xiangyuzhang'
 
-
+import time
 
 def completeset(Allow):
                 # Allow is a list with allowed bits, like ['00','01']
@@ -15,6 +15,7 @@ def completeset(Allow):
     for i in complete:
         if i not in Allow:
             result.append(i)
+
     return result
 
 
