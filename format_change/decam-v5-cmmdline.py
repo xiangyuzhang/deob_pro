@@ -384,11 +384,11 @@ class DissectCkt:
             finalCNF.pop()
         else:
             finalCNF = self.camCNFile[:]
-            if self.MuxStyle is not None:
-                soluCBline = CBconstrain(self.MuxStyle, self.camCBindex)
+            for i in range(len(self.MuxStyle)):
+                soluCBline = CBconstrain(self.MuxStyle[i], self.inputs[i])
                 print "This forbidden bits added in last step is: ", soluCBline
-                for i in soluCBline:
-                    finalCNF.append(i)
+                for j in soluCBline:
+                    finalCNF.append(j)
             # assign PIs:
             PI2assign = self.OracPIls[0]
             for i in range(len(PI2assign)):
