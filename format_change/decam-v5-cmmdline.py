@@ -67,13 +67,14 @@ class DissectCkt:
         self.camVarNum = 0 #total # of vars in orignal cam ckt
 
         self.newDupCkt = []
-        self.MuxStyle = MuxStyle
+        self.MuxStyle = []
         #readline.set_completer_delims(' \t\n;')
         #readline.parse_and_bind("tab: complete")   
         #readline.set_completer(cmmd_and_path_complete)
         self.verbose = verbose
         self.varLs = []
         self.clauseLs = []
+        self.inputs = []
 
     def _initDissect(self):
         '''generates an initial pair of programming bit assignments, then generates an primary input vector that can distinguish them.'''
@@ -85,11 +86,17 @@ class DissectCkt:
         print"Evaluating the first PI verctor using SAT solver... ..."
         origCkt = re.search(r'(.*)(?=\.)', self.CamInPath).group()
         #baseMtrCnf = origCkt+'-baseMtr.cnf'
-
+        with open(self.CamInPath,'r') as infile:
+            inV = infile.read()
+            Vlines = inV.replace('\r','').split(';\n')
+        for line in Vlines:
+            if 'RE__ALLOW' in line:
+                Allow = line[line.find('ALLOW(')+6:line.find(')')].split(',')
+                self.MuxStyle.append(completeset(Allow))
         #1. generate the basic miter cnf
 
         cnfTup = v2cnfMtr(self.CamInPath, self.MuxStyle)
-
+        self.inputs = cnfTup[1]
         self.baseCnfMtrLs = cnfTup[0]
         inputsInt = cnfTup[1]
         self.camPIndex = inputsInt[0]
@@ -345,11 +352,11 @@ class DissectCkt:
 
             #5. rule rule out illegal p-bit assignments (11s), add them to the first ckt module:
             
-            if self.MuxStyle is not None:
-                soluCBline = CBconstrain(self.MuxStyle, self.camCBindex)
+            for i in range(len(self.MuxStyle)):
+                soluCBline = CBconstrain(self.MuxStyle[i], self.inputs[i])
                 print "This forbidden bits added in last step is: ", soluCBline
-                for i in soluCBline:
-                    tmpCnfLs[0].append(i)
+                for j in soluCBline:
+                    tmpCnfLs[0].append(j)
 
 
     

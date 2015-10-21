@@ -4,6 +4,7 @@ import re
 import os
 import time
 from testforbid import CBconstrain
+from completeset import completeset
 
 
 
@@ -437,6 +438,7 @@ def v2cnfMtr(camInV, MuxStyle):
     #piVars = []
     posIndex = []	#store integer indexes of pos to return
     poVars = []
+    Allow = []
     gateCnt = 0
     # order of integers: PI vars, programming bit vars, PO vars, internal wire vars;
     for line in Vlines:
@@ -520,8 +522,8 @@ def v2cnfMtr(camInV, MuxStyle):
         piConsLine2 = '-'+str(i)+' '+str(i+camVarNum)+' 0\n'
         cnFile.append(piConsLine2)
     #2.2 rule out illegal bits
-    if MuxStyle is not None:
-        CBforbit1 = CBconstrain(MuxStyle, inputs[1])
+    for i in range(len(MuxStyle)):
+        CBforbit1 = CBconstrain(MuxStyle[i], inputs[i+1])
         for i in CBforbit1:
             cnFile.append(i)
         print "Here is the forbidden bits for original circuit: ", CBforbit1

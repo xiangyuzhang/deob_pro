@@ -16,5 +16,4 @@ def CBconstrain (MuxStyle, camCBindex):
             CBconstrain += '0\n'
             result.append(CBconstrain)
             CBconstrain = ''
-
     return result
