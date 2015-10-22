@@ -91,7 +91,7 @@ class DissectCkt:
         #if os.path.isfile(OracNFile):
         self.OracPIndex = genOraCnfRes[0]
         self.OracPOindex = genOraCnfRes[1]
-        self.OraCNFile = genOraCnfRes[2]    
+        self.OraCNFile = genOraCnfRes[2]
         self.OracVarNum = genOraCnfRes[3]
         #return 1   
 
@@ -110,9 +110,9 @@ class DissectCkt:
         # time.sleep(100)
         self.baseCnfMtrLs = cnfTup[0]
         inputsInt = cnfTup[1]
-        self.inputs = cnfTup[1]
-        self.camPIndex = inputsInt[0]
-        self.camCBindex = inputsInt[1]
+        self.inputs = cnfTup[1][:]
+        self.camPIndex = inputsInt[0][:]
+        self.camCBindex = inputsInt[1][:]
         for i in inputsInt[2:]:
             self.camCBindex.extend(i)
             inputsInt.remove(i)
@@ -140,11 +140,13 @@ class DissectCkt:
         for line in Vlines:
             if 'RE__ALLOW' in line:
                 Allow = line[line.find('ALLOW(')+6:line.find(')')].split(',')
-                print Allow
+                # print Allow
                 if len(completeset(Allow)) is not 0:
                     self.MuxStyle.append(completeset(Allow))
                     MuxStyle.append(completeset(Allow))
-                print self.MuxStyle
+                elif len(completeset(Allow)) is 0:
+                    self.MuxStyle.append('NULL')
+                    MuxStyle.append(completeset(Allow))
 
         #time.sleep(111111)
         ''' 1. generate the oracle cnf '''
@@ -487,10 +489,11 @@ class DissectCkt:
 
             #5. rule rule out illegal p-bit assignments (11s), add them to the first ckt module:
             for i in range(len(self.MuxStyle)):
-                soluCBline = CBconstrain(self.MuxStyle[i], self.inputs[i+1])
-                print "This forbidden bits added in last step is: ", soluCBline
-                for j in soluCBline:
-                    tmpCnfLs[0].append(j)
+                if self.MuxStyle[i] is not 'NULL':
+                    soluCBline = CBconstrain(self.MuxStyle[i], self.inputs[i+1])
+                    print "This forbidden bits added in last step is: ", soluCBline
+                    for j in soluCBline:
+                        tmpCnfLs[0].append(j)
 
 
 
@@ -522,10 +525,11 @@ class DissectCkt:
         else:
             finalCNF = camCNFile[:]
             for i in range(len(self.MuxStyle)):
-                soluCBline = CBconstrain(self.MuxStyle[i], self.inputs[i])
-                print "This forbidden bits added in last step is: ", soluCBline
-                for j in soluCBline:
-                    tmpCnfLs[0].append(j)
+                if self.MuxStyle[i] is not 'NULL':
+                    soluCBline = CBconstrain(self.MuxStyle[i], self.inputs[i+1])
+                    print "This forbidden bits added in last step is: ", soluCBline
+                    for j in soluCBline:
+                        tmpCnfLs[0].append(j)
 
             # assign PIs:
             PI2assign = OracPIls[0]

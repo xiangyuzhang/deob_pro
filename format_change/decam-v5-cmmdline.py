@@ -92,24 +92,30 @@ class DissectCkt:
         for line in Vlines:
             if 'RE__ALLOW' in line:
                 Allow = line[line.find('ALLOW(')+6:line.find(')')].split(',')
-                self.MuxStyle.append(completeset(Allow))
+                if len(completeset(Allow)) is not 0:
+                    self.MuxStyle.append(completeset(Allow))
+                else:
+                    self.MuxStyle.append('NULL')
+
         #1. generate the basic miter cnf
 
         cnfTup = v2cnfMtr(self.CamInPath, self.MuxStyle)
-        self.inputs = cnfTup[1]
+        self.inputs = cnfTup[1][:]
         self.baseCnfMtrLs = cnfTup[0]
         inputsInt = cnfTup[1]
-        self.camPIndex = inputsInt[0]
-        self.camCBindex = inputsInt[1]
+        self.camPIndex = inputsInt[0][:]
+        self.camCBindex = inputsInt[1][:]
         for i in inputsInt[2:]:
             self.camCBindex.extend(i)
             inputsInt.remove(i)
         self.pbitsNum = len(self.camCBindex)
+
         self.ObfGateNum = self.pbitsNum/2
         self.camPOindex = cnfTup[2]
         self.camVarNum = cnfTup[3]
         self.camCNFile = cnfTup[4]
         self.PInum2grab = len(self.camPIndex)
+        print self.inputs
 #        for i in self.baseCnfMtrLs:
 #            with open ("test", "a") as infile:
 #                infile.write(i)
@@ -308,12 +314,12 @@ class DissectCkt:
 
 
 
-    def _findSolu(self):
+    def _findSolu(self, tmpCnfLs=None):
         ''' find the programming bit assignment solution for the cam ckt.'''
 
         print '\n---------------------------------------------------------'
         print 'All necessary vectors are collected, now generating solution...'
-
+        print self.inputs
         ### 1. duplicate camouflaged circuits:      
         num2dup = len(self.OracPIls)
         totVarNum = num2dup * self.camVarNum
@@ -351,12 +357,13 @@ class DissectCkt:
             tmpCnfLs.insert(0, self.camCNFile)
 
             #5. rule rule out illegal p-bit assignments (11s), add them to the first ckt module:
-            
+            # print self.inputs
             for i in range(len(self.MuxStyle)):
-                soluCBline = CBconstrain(self.MuxStyle[i], self.inputs[i])
-                print "This forbidden bits added in last step is: ", soluCBline
-                for j in soluCBline:
-                    tmpCnfLs[0].append(j)
+                if self.MuxStyle[i] is not 'NULL':
+                    soluCBline = CBconstrain(self.MuxStyle[i], self.inputs[i+1])
+                    print "This forbidden bits added in last step is: ", soluCBline
+                    for j in soluCBline:
+                        tmpCnfLs[0].append(j)
 
 
     
@@ -385,10 +392,11 @@ class DissectCkt:
         else:
             finalCNF = self.camCNFile[:]
             for i in range(len(self.MuxStyle)):
-                soluCBline = CBconstrain(self.MuxStyle[i], self.inputs[i])
-                print "This forbidden bits added in last step is: ", soluCBline
-                for j in soluCBline:
-                    finalCNF.append(j)
+                if self.MuxStyle[i] is not 'NULL':
+                    soluCBline = CBconstrain(self.MuxStyle[i], self.inputs[i+1])
+                    print "This forbidden bits added in last step is: ", soluCBline
+                    for j in soluCBline:
+                        tmpCnfLs[0].append(j)
             # assign PIs:
             PI2assign = self.OracPIls[0]
             for i in range(len(PI2assign)):
@@ -463,6 +471,7 @@ class DissectCkt:
         #1. _initDissect: gen initial PI and PO:
         time1=time.time()
         initRes = self._initDissect()
+        print self.inputs
         time2=time.time()
         if initRes==1:
             print '\n---------------------------------------------------------'
@@ -476,6 +485,7 @@ class DissectCkt:
             iterCnt += 1
             #3. iteratively look for new p-bit pairs and PI:
             iterate = 1
+
             #the first newDupCkt is the baseMtrCnf:
             self.newDupCkt = self.baseCnfMtrLs[:]
             while iterate==1:
@@ -498,7 +508,7 @@ class DissectCkt:
                 #print 'Primary output vectors:'
                 #print self.OracPOls
             #4. find final solution:
-
+            # print self.inputs
             self._findSolu()
             if self.verbose==True:
                 res = "#iterationNumber\tvarNumber\tclauseNumber\titertionTime\n"

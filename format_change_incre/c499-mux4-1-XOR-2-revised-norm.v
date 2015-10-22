@@ -7,11 +7,11 @@ input N1,N5,N9,N13,N17,N21,N25,N29,N33,N37,
       N121,N125,N129,N130,N131,N132,N133,N134,N135,N136,
       N137;   //RE__PI;
 
-input p1,p2,p3,p4; //RE__ALLOW(00,01,10,11);
+input p1,p2,p3,p4; //RE__ALLOW(10,01,00,11);
 
 
 
-input X_1,X_2;  //RE__ALLOW(00,01,10,11);
+input X_1,X_2;  //RE__ALLOW(00);
 
 
 

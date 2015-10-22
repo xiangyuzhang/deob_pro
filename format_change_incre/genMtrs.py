@@ -1172,6 +1172,7 @@ def v2cnfMtr(camInV, MuxStyle, MuxStyle_flag, header=True):
     #2.2 rule out illegal bits
     for i in range(len(MuxStyle)):
 
+
         CBforbit1 = CBconstrain(MuxStyle[i], inputs[i+1])
         for i in CBforbit1:
             cnFile.append(i)

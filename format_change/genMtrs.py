@@ -523,29 +523,30 @@ def v2cnfMtr(camInV, MuxStyle):
         cnFile.append(piConsLine2)
     #2.2 rule out illegal bits
     for i in range(len(MuxStyle)):
-        CBforbit1 = CBconstrain(MuxStyle[i], inputs[i+1])
-        for i in CBforbit1:
-            cnFile.append(i)
-        print "Here is the forbidden bits for original circuit: ", CBforbit1
-        intIndexLs = []
-        CBforbit2 = []
-        for i in range(len(CBforbit1)):
-            tmpInt = CBforbit1[i]
-            if tmpInt!='':
-                intIndexLs.append(tmpInt.split()[:-1])
-        for j in range(len(intIndexLs)):
-            newTmpCls = ''
-            tmpInt = intIndexLs[j]
-            for z in tmpInt:
-                if '-' in z:
-                    newTmpCls+='-'+str(int(z.strip('-'))+camVarNum)+' '
-                else:
-                    newTmpCls+=str(int(z)+camVarNum)+' '
-            newTmpCls +="0\n"
-            CBforbit2.append(newTmpCls)
-        print "Here is the forbidden bits for second duplication", CBforbit2
-        for i in CBforbit2:
-            cnFile.append(i)
+        if MuxStyle[i] is not 'NULL':
+            CBforbit1 = CBconstrain(MuxStyle[i], inputs[i+1])
+            for i in CBforbit1:
+                cnFile.append(i)
+            print "Here is the forbidden bits for original circuit: ", CBforbit1
+            intIndexLs = []
+            CBforbit2 = []
+            for i in range(len(CBforbit1)):
+                tmpInt = CBforbit1[i]
+                if tmpInt!='':
+                    intIndexLs.append(tmpInt.split()[:-1])
+            for j in range(len(intIndexLs)):
+                newTmpCls = ''
+                tmpInt = intIndexLs[j]
+                for z in tmpInt:
+                    if '-' in z:
+                        newTmpCls+='-'+str(int(z.strip('-'))+camVarNum)+' '
+                    else:
+                        newTmpCls+=str(int(z)+camVarNum)+' '
+                newTmpCls +="0\n"
+                CBforbit2.append(newTmpCls)
+            print "Here is the forbidden bits for second duplication", CBforbit2
+            for i in CBforbit2:
+                cnFile.append(i)
 
 
 
