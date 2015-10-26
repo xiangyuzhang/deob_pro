@@ -80,7 +80,7 @@ def CircuitScanner(circuitIn, Num_pair):
                         if reg_findall(reg_netName, connected_line)[-1] in line_input:
                             if re.findall(reg_gateName, connected_line) is not 'gate' and len(re.findall(reg_gateName, connected_line)) != 0:  # meaning the gate is the fanout of this gate
                                 pre_gate_temp = re.findall(reg_gateName, connected_line)     # make this gate pre_gate
-                                in_netName = reg_findall(reg_netName, connected_line)[-1]
+                                in_netName = reg_findall(reg_netName, connected_line)[:-1]
                                 pre_gate.append(pre_gate_temp)
                                 has_pre_gate = True
     #                            print ' has pre_gate', pre_gate
@@ -89,7 +89,7 @@ def CircuitScanner(circuitIn, Num_pair):
                         if line_output in reg_findall(reg_netName, connected_line)[:-1]:     # meaning the buf is the fan in of this gate
                             if re.findall(reg_gateName, connected_line) is not 'gate' and len(re.findall(reg_gateName, connected_line)) != 0:       # means the next gate is not a buf
                                 next_gate_temp = re.findall(reg_gateName, connected_line)        # make the gate next_gate
-                                out_netName = reg_findall(reg_netName, connected_line)[:-1]
+                                out_netName = reg_findall(reg_netName, connected_line)[-1]
                                 next_gate.append(next_gate_temp)
                                 has_next_gate = True
     #                            print ' has next_gate', next_gate
