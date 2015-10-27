@@ -3,7 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="230893b0-c811-4a50-9932-44c4d9b51a86" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DummyWire.py" afterPath="$PROJECT_DIR$/DummyWire.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/re_test.py" afterPath="$PROJECT_DIR$/re_test.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wire_CircuitScanner.py" afterPath="$PROJECT_DIR$/wire_CircuitScanner.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="DummyWire.iws" />
@@ -29,7 +30,7 @@
         <entry file="file://$PROJECT_DIR$/wire_CircuitScanner.py">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="114" column="0" selection-start-line="114" selection-start-column="0" selection-end-line="114" selection-end-column="0" />
+              <caret line="91" column="71" selection-start-line="91" selection-start-column="71" selection-end-line="91" selection-end-column="71" />
               <folding>
                 <element signature="e#0#15#0" expanded="true" />
                 <element signature="e#110#302#0" expanded="false" />
@@ -60,25 +61,28 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="c3540-mux4-1.v" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/c3540-mux4-1.v">
+      <file leaf-file-name="DummyWire.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/DummyWire.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-7.296296">
-              <caret line="532" column="34" selection-start-line="532" selection-start-column="29" selection-end-line="532" selection-end-column="34" />
-              <folding />
+            <state vertical-scroll-proportion="0.61538464">
+              <caret line="123" column="13" selection-start-line="123" selection-start-column="13" selection-end-line="123" selection-end-column="13" />
+              <folding>
+                <element signature="e#28#43#0" expanded="true" />
+                <element signature="e#216#2273#0" expanded="false" />
+                <element signature="e#2433#2901#0" expanded="false" />
+                <element signature="e#3017#3296#0" expanded="false" />
+                <element signature="e#3523#4715#0" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="DummyWire.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/DummyWire.py">
+      <file leaf-file-name="c3540-mux4-1.v" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/c3540-mux4-1.v">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.13824885">
-              <caret line="6" column="73" selection-start-line="6" selection-start-column="73" selection-end-line="6" selection-end-column="73" />
-              <folding>
-                <element signature="e#28#43#0" expanded="true" />
-                <element signature="e#191#1989#0" expanded="false" />
-              </folding>
+            <state vertical-scroll-proportion="-7.296296">
+              <caret line="1237" column="13" selection-start-line="1237" selection-start-column="5" selection-end-line="1237" selection-end-column="13" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -100,9 +104,9 @@
       <list>
         <option value="$PROJECT_DIR$/c499-mux4-1-XOR-2-revised-norm.v" />
         <option value="$PROJECT_DIR$/c7552-abcmap-fmt.v" />
+        <option value="$PROJECT_DIR$/re_test.py" />
         <option value="$PROJECT_DIR$/EXE_circuitScanner.py" />
         <option value="$PROJECT_DIR$/wire_CircuitScanner.py" />
-        <option value="$PROJECT_DIR$/re_test.py" />
         <option value="$PROJECT_DIR$/DummyWire.py" />
       </list>
     </option>
@@ -129,7 +133,7 @@
         </expanded-state>
         <selected-state>
           <State>
-            <id>PyPep8Inspection</id>
+            <id>PyRedeclarationInspection</id>
           </State>
         </selected-state>
       </profile-state>
@@ -193,7 +197,7 @@
       <recent name="$PROJECT_DIR$" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.re_test">
+  <component name="RunManager" selected="Python.EXE_circuitScanner">
     <configuration default="false" name="wire_CircuitScanner" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -241,7 +245,7 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="DummyWire" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/EXE_circuitScanner.py" />
-      <option name="PARAMETERS" value="c7552-abcmap-fmt.v 50" />
+      <option name="PARAMETERS" value="c3540-mux4-1.v 50" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <method />
     </configuration>
@@ -374,8 +378,8 @@
     </list>
     <recent_temporary>
       <list size="3">
-        <item index="0" class="java.lang.String" itemvalue="Python.re_test" />
-        <item index="1" class="java.lang.String" itemvalue="Python.EXE_circuitScanner" />
+        <item index="0" class="java.lang.String" itemvalue="Python.EXE_circuitScanner" />
+        <item index="1" class="java.lang.String" itemvalue="Python.re_test" />
         <item index="2" class="java.lang.String" itemvalue="Python.wire_CircuitScanner" />
       </list>
     </recent_temporary>
@@ -409,7 +413,13 @@
       <option name="project" value="LOCAL" />
       <updated>1445890882896</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="feat: 终于把MUX2model搞好了">
+      <created>1445917605876</created>
+      <option name="number" value="00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1445917605876</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -452,7 +462,8 @@
     <MESSAGE value="circuit_scanner  应该是做成了" />
     <MESSAGE value="circuit_scanner  加上了随机的选项以trade off速度，EXE版本运行正常，但是lib版本总觉得怪怪的" />
     <MESSAGE value="修复：EXE和LIB版本的电路扫描器的in_netName输出错误的问题" />
-    <option name="LAST_COMMIT_MESSAGE" value="修复：EXE和LIB版本的电路扫描器的in_netName输出错误的问题" />
+    <MESSAGE value="feat: 终于把MUX2model搞好了" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: 终于把MUX2model搞好了" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -677,14 +688,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/c7552-abcmap-fmt.v">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/c499-mux4-1-XOR-2-revised-norm.v">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -709,10 +712,18 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/c7552-abcmap-fmt.v">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.33333334">
+          <caret line="1995" column="14" selection-start-line="1995" selection-start-column="6" selection-end-line="1995" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/c3540-mux4-1.v">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-7.296296">
-          <caret line="532" column="34" selection-start-line="532" selection-start-column="29" selection-end-line="532" selection-end-column="34" />
+          <caret line="1237" column="13" selection-start-line="1237" selection-start-column="5" selection-end-line="1237" selection-end-column="13" />
           <folding />
         </state>
       </provider>
@@ -722,17 +733,6 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="25" selection-end-column="68" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wire_CircuitScanner.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="114" column="0" selection-start-line="114" selection-start-column="0" selection-end-line="114" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#15#0" expanded="true" />
-            <element signature="e#110#302#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -746,13 +746,27 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/wire_CircuitScanner.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="91" column="71" selection-start-line="91" selection-start-column="71" selection-end-line="91" selection-end-column="71" />
+          <folding>
+            <element signature="e#0#15#0" expanded="true" />
+            <element signature="e#110#302#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/DummyWire.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.13824885">
-          <caret line="6" column="73" selection-start-line="6" selection-start-column="73" selection-end-line="6" selection-end-column="73" />
+        <state vertical-scroll-proportion="0.61538464">
+          <caret line="123" column="13" selection-start-line="123" selection-start-column="13" selection-end-line="123" selection-end-column="13" />
           <folding>
             <element signature="e#28#43#0" expanded="true" />
-            <element signature="e#191#1989#0" expanded="false" />
+            <element signature="e#216#2273#0" expanded="false" />
+            <element signature="e#2433#2901#0" expanded="false" />
+            <element signature="e#3017#3296#0" expanded="false" />
+            <element signature="e#3523#4715#0" expanded="false" />
           </folding>
         </state>
       </provider>
