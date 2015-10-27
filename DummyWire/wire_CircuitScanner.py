@@ -68,47 +68,45 @@ def CircuitScanner(circuitIn, Num_pair):
     for i in random_sequence:
         line = Vlines[i]
         if line!='' and line[0]!='/' and not 'module' in line and not 'input' in line and not 'output' in line and not 'wire' in line:
-            if 1 is 1:
-                check = -1
     # select the input and output, the input should be the output from previous gate(pre_out), the output should be the input for next gate(next_in)
-                line_netname = reg_findall(reg_netName, line)
-                line_input = line_netname[:-1]
-                line_output = line_netname[-1]
-    #            print "Gate: ", re.findall(reg_gateName, line)
-                for connected_line in Vlines:
-                    if connected_line!='' and connected_line[0]!='/' and not 'module' in connected_line and not 'input' in connected_line and not 'output' in connected_line and not 'wire' in connected_line:
-                        if reg_findall(reg_netName, connected_line)[-1] in line_input:
-                            if re.findall(reg_gateName, connected_line) is not 'gate' and len(re.findall(reg_gateName, connected_line)) != 0:  # meaning the gate is the fanout of this gate
-                                pre_gate_temp = re.findall(reg_gateName, connected_line)     # make this gate pre_gate
-                                in_netName = reg_findall(reg_netName, line)[:-1]
-                                pre_gate.append(pre_gate_temp)
-                                has_pre_gate = True
-    #                            print ' has pre_gate', pre_gate
+            line_netname = reg_findall(reg_netName, line)
+            line_input = line_netname[:-1]
+            line_output = line_netname[-1]
+#            print "Gate: ", re.findall(reg_gateName, line)
+            for connected_line in Vlines:
+                if connected_line!='' and connected_line[0]!='/' and not 'module' in connected_line and not 'input' in connected_line and not 'output' in connected_line and not 'wire' in connected_line:
+                    if reg_findall(reg_netName, connected_line)[-1] in line_input:
+                        if re.findall(reg_gateName, connected_line) is not 'gate' and len(re.findall(reg_gateName, connected_line)) != 0:  # meaning the gate is the fanout of this gate
+                            pre_gate_temp = re.findall(reg_gateName, connected_line)     # make this gate pre_gate
+                            in_netName = reg_findall(reg_netName, line)[:-1]
+                            pre_gate.append(pre_gate_temp)
+                            has_pre_gate = True
+#                            print ' has pre_gate', pre_gate
 
-                    if connected_line!='' and connected_line[0]!='/' and not 'module' in connected_line and not 'input' in connected_line and not 'output' in connected_line and not 'wire' in connected_line:
-                        if line_output in reg_findall(reg_netName, connected_line)[:-1]:     # meaning the buf is the fan in of this gate
-                            if re.findall(reg_gateName, connected_line) is not 'gate' and len(re.findall(reg_gateName, connected_line)) != 0:       # means the next gate is not a buf
-                                next_gate_temp = re.findall(reg_gateName, connected_line)        # make the gate next_gate
-                                out_netName = reg_findall(reg_netName, line)[-1]
-                                next_gate.append(next_gate_temp)
-                                has_next_gate = True
-    #                            print ' has next_gate', next_gate
+                if connected_line!='' and connected_line[0]!='/' and not 'module' in connected_line and not 'input' in connected_line and not 'output' in connected_line and not 'wire' in connected_line:
+                    if line_output in reg_findall(reg_netName, connected_line)[:-1]:     # meaning the buf is the fan in of this gate
+                        if re.findall(reg_gateName, connected_line) is not 'gate' and len(re.findall(reg_gateName, connected_line)) != 0:       # means the next gate is not a buf
+                            next_gate_temp = re.findall(reg_gateName, connected_line)        # make the gate next_gate
+                            out_netName = reg_findall(reg_netName, line)[-1]
+                            next_gate.append(next_gate_temp)
+                            has_next_gate = True
+#                            print ' has next_gate', next_gate
 
-                this_gate = re.findall(reg_gateName, line)
-                this_gate_type = re.findall(reg_gateType, line)[0]
+            this_gate = re.findall(reg_gateName, line)
+            this_gate_type = re.findall(reg_gateType, line)[0]
 
-                if has_pre_gate is True and has_next_gate is True:
-                    pair_list.append(pair(pre_gate,next_gate,this_gate,this_gate_type, in_netName, out_netName))
+            if has_pre_gate is True and has_next_gate is True:
+                pair_list.append(pair(pre_gate,next_gate,this_gate,this_gate_type, in_netName, out_netName))
 
-                pre_gate = []
-                next_gate =[]
-                has_pre_gate = False
-                has_next_gate = False
-        #            print '\n'
-        #  clean up all the pairs
+            pre_gate = []
+            next_gate =[]
+            has_pre_gate = False
+            has_next_gate = False
+    #            print '\n'
+    #  clean up all the pairs
 
 
-        return pair_list
+    return pair_list
 
 
 

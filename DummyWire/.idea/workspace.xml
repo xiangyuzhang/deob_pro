@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="230893b0-c811-4a50-9932-44c4d9b51a86" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DummyWire.py" afterPath="$PROJECT_DIR$/DummyWire.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wire_CircuitScanner.py" afterPath="$PROJECT_DIR$/wire_CircuitScanner.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
@@ -30,7 +29,7 @@
         <entry file="file://$PROJECT_DIR$/wire_CircuitScanner.py">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="91" column="71" selection-start-line="91" selection-start-column="71" selection-end-line="91" selection-end-column="71" />
+              <caret line="67" column="0" selection-start-line="67" selection-start-column="0" selection-end-line="67" selection-end-column="0" />
               <folding>
                 <element signature="e#0#15#0" expanded="true" />
                 <element signature="e#110#302#0" expanded="false" />
@@ -43,7 +42,7 @@
         <entry file="file://$PROJECT_DIR$/EXE_circuitScanner.py">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="114" column="0" selection-start-line="114" selection-start-column="0" selection-end-line="114" selection-end-column="0" />
+              <caret line="114" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="122" selection-end-column="0" />
               <folding>
                 <element signature="e#0#15#0" expanded="true" />
               </folding>
@@ -64,15 +63,21 @@
       <file leaf-file-name="DummyWire.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/DummyWire.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.61538464">
-              <caret line="123" column="13" selection-start-line="123" selection-start-column="13" selection-end-line="123" selection-end-column="13" />
+            <state vertical-scroll-proportion="0.7715736">
+              <caret line="155" column="0" selection-start-line="155" selection-start-column="0" selection-end-line="155" selection-end-column="0" />
               <folding>
                 <element signature="e#28#43#0" expanded="true" />
-                <element signature="e#216#2273#0" expanded="false" />
-                <element signature="e#2433#2901#0" expanded="false" />
-                <element signature="e#3017#3296#0" expanded="false" />
-                <element signature="e#3523#4715#0" expanded="false" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="random.py" pinned="false" current-in-tab="false">
+        <entry file="file:///Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/random.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="241" column="0" selection-start-line="241" selection-start-column="0" selection-end-line="241" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -80,7 +85,7 @@
       <file leaf-file-name="c3540-mux4-1.v" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/c3540-mux4-1.v">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-7.296296">
+            <state vertical-scroll-proportion="19.925926">
               <caret line="1237" column="13" selection-start-line="1237" selection-start-column="5" selection-end-line="1237" selection-end-column="13" />
               <folding />
             </state>
@@ -106,8 +111,8 @@
         <option value="$PROJECT_DIR$/c7552-abcmap-fmt.v" />
         <option value="$PROJECT_DIR$/re_test.py" />
         <option value="$PROJECT_DIR$/EXE_circuitScanner.py" />
-        <option value="$PROJECT_DIR$/wire_CircuitScanner.py" />
         <option value="$PROJECT_DIR$/DummyWire.py" />
+        <option value="$PROJECT_DIR$/wire_CircuitScanner.py" />
       </list>
     </option>
   </component>
@@ -197,7 +202,7 @@
       <recent name="$PROJECT_DIR$" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.EXE_circuitScanner">
+  <component name="RunManager" selected="Python.DummyWire">
     <configuration default="false" name="wire_CircuitScanner" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -246,6 +251,23 @@
       <module name="DummyWire" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/EXE_circuitScanner.py" />
       <option name="PARAMETERS" value="c3540-mux4-1.v 50" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <method />
+    </configuration>
+    <configuration default="false" name="DummyWire" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="DummyWire" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/DummyWire.py" />
+      <option name="PARAMETERS" value="c432-mux4-1.v 20" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <method />
     </configuration>
@@ -371,16 +393,18 @@
       <option name="USE_KEYWORD" value="false" />
       <method />
     </configuration>
-    <list size="3">
+    <list size="4">
       <item index="0" class="java.lang.String" itemvalue="Python.wire_CircuitScanner" />
       <item index="1" class="java.lang.String" itemvalue="Python.re_test" />
       <item index="2" class="java.lang.String" itemvalue="Python.EXE_circuitScanner" />
+      <item index="3" class="java.lang.String" itemvalue="Python.DummyWire" />
     </list>
     <recent_temporary>
-      <list size="3">
-        <item index="0" class="java.lang.String" itemvalue="Python.EXE_circuitScanner" />
-        <item index="1" class="java.lang.String" itemvalue="Python.re_test" />
-        <item index="2" class="java.lang.String" itemvalue="Python.wire_CircuitScanner" />
+      <list size="4">
+        <item index="0" class="java.lang.String" itemvalue="Python.DummyWire" />
+        <item index="1" class="java.lang.String" itemvalue="Python.EXE_circuitScanner" />
+        <item index="2" class="java.lang.String" itemvalue="Python.re_test" />
+        <item index="3" class="java.lang.String" itemvalue="Python.wire_CircuitScanner" />
       </list>
     </recent_temporary>
   </component>
@@ -419,25 +443,31 @@
       <option name="project" value="LOCAL" />
       <updated>1445917605876</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="修复了一些This_gate_in_netName的bug，现在建好了MUX，下一步是修改next_gate的网表的信息，然后输出结果">
+      <created>1445960636545</created>
+      <option name="number" value="00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1445960636545</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="-1920" y="-246" width="1920" height="1080" extended-state="0" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.13744076" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.36039603" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.14112692" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Debug" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.36039603" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32772276" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32772276" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3298647" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32970297" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -463,7 +493,8 @@
     <MESSAGE value="circuit_scanner  加上了随机的选项以trade off速度，EXE版本运行正常，但是lib版本总觉得怪怪的" />
     <MESSAGE value="修复：EXE和LIB版本的电路扫描器的in_netName输出错误的问题" />
     <MESSAGE value="feat: 终于把MUX2model搞好了" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: 终于把MUX2model搞好了" />
+    <MESSAGE value="修复了一些This_gate_in_netName的bug，现在建好了MUX，下一步是修改next_gate的网表的信息，然后输出结果" />
+    <option name="LAST_COMMIT_MESSAGE" value="修复了一些This_gate_in_netName的bug，现在建好了MUX，下一步是修改next_gate的网表的信息，然后输出结果" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -473,6 +504,26 @@
           <line>114</line>
           <option name="timeStamp" value="68" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="python-line">
+          <url>file://$PROJECT_DIR$/DummyWire.py</url>
+          <line>155</line>
+          <option name="timeStamp" value="70" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="python-line">
+          <url>file://$PROJECT_DIR$/wire_CircuitScanner.py</url>
+          <line>27</line>
+          <option name="timeStamp" value="125" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="python-line">
+          <url>file://$PROJECT_DIR$/wire_CircuitScanner.py</url>
+          <line>67</line>
+          <option name="timeStamp" value="126" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="python-line">
+          <url>file://$PROJECT_DIR$/DummyWire.py</url>
+          <line>132</line>
+          <option name="timeStamp" value="143" />
+        </line-breakpoint>
       </breakpoints>
       <default-breakpoints>
         <breakpoint type="python-exception">
@@ -481,22 +532,16 @@
           </properties>
         </breakpoint>
       </default-breakpoints>
-      <option name="time" value="70" />
+      <option name="time" value="144" />
     </breakpoint-manager>
     <watches-manager>
       <configuration name="PythonConfigurationType">
+        <watch expression="new_CB" language="Python" />
+        <watch expression="new_netlist" language="Python" />
+        <watch expression="new_wires" language="Python" />
         <watch expression="pair_list" language="Python" />
-        <watch expression="line" language="Python" />
-        <watch expression="line_input" language="Python" />
-        <watch expression="line_output" language="Python" />
-        <watch expression="pre_gate" language="Python" />
-        <watch expression="next_gate" language="Python" />
-        <watch expression="re.findall(reg_gateType, connected_line)[0]" language="Python" />
-        <watch expression="re.findall(reg_gateName, connected_line)" language="Python" />
-        <watch expression="connected_line" language="Python" />
-        <watch expression="re.findall(reg_gateName, connected_line)" language="Python" />
-        <watch expression="len(re.findall(reg_gateName, connected_line))" language="Python" />
-        <watch expression="circuitIn" language="Python" />
+        <watch expression="Num_pair" language="Python" />
+        <watch expression="random_sequence" language="Python" />
       </configuration>
     </watches-manager>
   </component>
@@ -720,14 +765,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/c3540-mux4-1.v">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-7.296296">
-          <caret line="1237" column="13" selection-start-line="1237" selection-start-column="5" selection-end-line="1237" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/re_test.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -736,10 +773,26 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/c3540-mux4-1.v">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="19.925926">
+          <caret line="1237" column="13" selection-start-line="1237" selection-start-column="5" selection-end-line="1237" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/random.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="241" column="0" selection-start-line="241" selection-start-column="0" selection-end-line="241" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/EXE_circuitScanner.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="114" column="0" selection-start-line="114" selection-start-column="0" selection-end-line="114" selection-end-column="0" />
+          <caret line="114" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="122" selection-end-column="0" />
           <folding>
             <element signature="e#0#15#0" expanded="true" />
           </folding>
@@ -749,7 +802,7 @@
     <entry file="file://$PROJECT_DIR$/wire_CircuitScanner.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="91" column="71" selection-start-line="91" selection-start-column="71" selection-end-line="91" selection-end-column="71" />
+          <caret line="67" column="0" selection-start-line="67" selection-start-column="0" selection-end-line="67" selection-end-column="0" />
           <folding>
             <element signature="e#0#15#0" expanded="true" />
             <element signature="e#110#302#0" expanded="false" />
@@ -759,14 +812,10 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/DummyWire.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.61538464">
-          <caret line="123" column="13" selection-start-line="123" selection-start-column="13" selection-end-line="123" selection-end-column="13" />
+        <state vertical-scroll-proportion="0.7715736">
+          <caret line="155" column="0" selection-start-line="155" selection-start-column="0" selection-end-line="155" selection-end-column="0" />
           <folding>
             <element signature="e#28#43#0" expanded="true" />
-            <element signature="e#216#2273#0" expanded="false" />
-            <element signature="e#2433#2901#0" expanded="false" />
-            <element signature="e#3017#3296#0" expanded="false" />
-            <element signature="e#3523#4715#0" expanded="false" />
           </folding>
         </state>
       </provider>

@@ -30,22 +30,27 @@ def abcmap_MUX_OBF_netlist(pi1, pi2, pi3, pi4, output, seed, programbit):
     new_netlist.append("or2  gate( .a(" +  "ED_" + str(seed + 6) + "), .b(" + "ED_" + str(seed + 8) +"), .O(" + "ED_" + str(seed + 9) +") );\n")
     new_netlist.append("or2  gate( .a(" +  "ED_" + str(seed + 9) + "), .b(" + "ED_" + str(seed + 7) +"), .O(" + str(output) +") );\n")
 
-    wire.append(D_bit1_not).append(D_bit2_not)
+    wire.append(D_bit1_not)
+    wire.append(D_bit2_not)
     for i in range(0,10):
         wire.append("ED_" + str(seed + i))
-    CB.append(D_bit1).append(D_bit2)
-    result.append(new_netlist).append(wire).append(CB).append(output)
+    CB.append(D_bit1)
+    CB.append(D_bit2)
+    result.append(new_netlist)
+    result.append(wire)
+    result.append(CB)
+    result.append(output)
     return result
 # seed is the initial index for wires
 # program bit is the initial index for CBs
-# return [wire, CB, netlist, output]
+# return [new_netlist, wire, CB, output]
 
 
 def find_backup_Mux_in(circuitIn):
     result = []
     with open(circuitIn, 'r') as infile:
         inV = infile.read()
-        Vlines = inV.replace('\r','').replace(';\n')
+        Vlines = inV.replace('\r','').split(';\n')
 
     for line in Vlines:
         line = line.replace('\n', '')
@@ -65,9 +70,9 @@ def random_sequence_generator(limit_num, select_range):
     random_sequence = []
     while random_counter < limit_num:
         temp = random.randint(0, select_range-1)
-    if temp not in random_sequence:
-        random_sequence.append(temp)
-        random_counter += 1
+        if temp not in random_sequence:
+            random_sequence.append(temp)
+            random_counter += 1
 
     return random_sequence
 # limit_num is the length of random_sequence
@@ -90,22 +95,27 @@ def camouflage_builder(target_pair, back_up_MUX_in, seed, programbit, output):
     else:
         random_sequence = random_sequence_generator((4 - len(this_gate_in_net)), len(back_up_MUX_in))
         if len(this_gate_in_net) is 1:
-            result = abcmap_MUX_OBF_netlist(this_gate_in_net[0], back_up_MUX_in(random_sequence[0]), back_up_MUX_in(random_sequence[1]),this_gate_out_net, output, seed, programbit)
-        if len(this_gate_in_net) is 2:
-            result = abcmap_MUX_OBF_netlist(this_gate_in_net[0], this_gate_in_net[1], back_up_MUX_in(random_sequence[1]),this_gate_out_net, output, seed, programbit)
-        if len(this_gate_in_net) is 3:
+            result = abcmap_MUX_OBF_netlist(this_gate_in_net[0], back_up_MUX_in[random_sequence[0]], back_up_MUX_in[random_sequence[1]],this_gate_out_net, output, seed, programbit)
+        elif len(this_gate_in_net) is 2:
+            result = abcmap_MUX_OBF_netlist(this_gate_in_net[0], this_gate_in_net[1], back_up_MUX_in[random_sequence[0]],this_gate_out_net, output, seed, programbit)
+        elif len(this_gate_in_net) is 3:
             result = abcmap_MUX_OBF_netlist(this_gate_in_net[0], this_gate_in_net[1], this_gate_in_net[2],this_gate_out_net, output, seed, programbit)
 
     return result
 
-print abcmap_MUX_OBF_netlist("N1", "N2", "N3", "N4", "Output", 0, 1)
+# print abcmap_MUX_OBF_netlist("N1", "N2", "N3", "N4", "Output", 0, 1)
 
 pair_list = []  # used to store the random selected gate pair
 back_up_MUX_in = []
 seed = 0
 programbit = 0
 MUX_O_index = 0
-new_netlist = []    # used to contain MUX
+camouflage_gates = []    # used to contain MUX
+new_CB = [] # used to contain the new CB for MUX
+new_wires = []  # used to contain the new wire necessary in MUX
+new_netlist = []
+replaced_gate = []
+reg_gateName = r'(gate[0-9]+)'
 # parser
 parser = argparse.ArgumentParser(usage='python DummyWire.py [-h]  <circuit.v> [number]]', description='This program will camouflage <circuit.v> with dummy wire',)
 parser.add_argument('<circuit.v>', help='input circuit to be camouflaged')
@@ -123,10 +133,27 @@ pair_list= CircuitScanner(CircuitPath, Num_pair)
 back_up_MUX_in = find_backup_Mux_in(circuitIn)
 # MUX builder
 for target_pair in pair_list:
-    new_netlist = camouflage_builder(target_pair, back_up_MUX_in, seed, programbit, 'MUX_O_' + MUX_O_index)
+    camouflage_gates = camouflage_builder(target_pair, back_up_MUX_in, seed, programbit, 'MUX_O_' + str(MUX_O_index))
+    new_netlist.append(camouflage_gates[0])         # result 1: MUX new_netlist
+    new_wires.append(camouflage_gates[1])       # result 2: MUX new_wire
+    new_CB.append(camouflage_gates[2])      # result 3: MUX new_CB
+
+
     seed += 10
     programbit += 2
     MUX_O_index += 1
+
+    with open(circuitIn, 'r') as infile:
+        inV = infile.read()
+        Vlines = inV.replace('\r','').split(';\n')
+
+    for line in Vlines:
+        line = line.replace('\n', '')
+        if re.findall(reg_gateName, line) in target_pair.next_gate:
+            line.replace(('(' + target_pair.out_netName + ')'), ('(MUX_O_' + str(MUX_O_index) + ')'))
+            replaced_gate.append(line)      # result 4: MUX replaced_gate
+
+print ''
 
 # content builder
 
