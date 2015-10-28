@@ -41,9 +41,9 @@ def CircuitScanner(circuitIn, Num_pair):
     has_next_gate = False
     random_sequence = []
     random_counter = 0
-
-
-
+    random.seed(1)
+    counter = 0
+    i = 0
 
     CircuitPath = os.path.abspath(circuitIn)
 
@@ -57,7 +57,7 @@ def CircuitScanner(circuitIn, Num_pair):
         Vlines = inV.replace('\r','').split(';\n')
 
     # random module
-    while random_counter < Num_pair:
+    while random_counter < (len(Vlines) - 10):
         temp = random.randint(0, len(Vlines) - 10)
         if temp not in random_sequence:
             random_sequence.append(temp)
@@ -65,8 +65,8 @@ def CircuitScanner(circuitIn, Num_pair):
 
 
     # find inv
-    for i in random_sequence:
-        line = Vlines[i]
+    while counter <= Num_pair - 1:
+        line = Vlines[random_sequence[i]]
         if line!='' and line[0]!='/' and not 'module' in line and not 'input' in line and not 'output' in line and not 'wire' in line:
     # select the input and output, the input should be the output from previous gate(pre_out), the output should be the input for next gate(next_in)
             line_netname = reg_findall(reg_netName, line)
@@ -97,7 +97,10 @@ def CircuitScanner(circuitIn, Num_pair):
 
             if has_pre_gate is True and has_next_gate is True:
                 pair_list.append(pair(pre_gate,next_gate,this_gate,this_gate_type, in_netName, out_netName))
-
+                counter+=1
+                i+=1
+            else:
+                i+=1
             pre_gate = []
             next_gate =[]
             has_pre_gate = False

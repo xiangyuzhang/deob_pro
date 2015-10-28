@@ -33,6 +33,7 @@ def abcmap_MUX_OBF_netlist(pi1, pi2, pi3, pi4, output, seed, programbit):
     new_netlist_str = ('').join(new_netlist)
     wire.append(D_bit1_not)
     wire.append(D_bit2_not)
+    wire.append(output)
     for i in range(0,10):
         wire.append("ED_" + str(seed + i))
     CB.append(D_bit1)
@@ -68,6 +69,7 @@ def random_sequence_generator(limit_num, select_range):
 
     random_counter = 1
     random.random()
+    random.seed(1)
     random_sequence = []
     while random_counter < limit_num:
         temp = random.randint(0, select_range-1)
@@ -147,18 +149,17 @@ for target_pair in pair_list:
     new_CB.append(camouflage_gates[2])      # result 3: MUX new_CB
 
 
-    seed += 10
-    programbit += 2
-    MUX_O_index += 1
-
     for line in Vlines:
         line = line.replace('\n', '')
         if re.findall(reg_gateName, line) in target_pair.next_gate:
             Out_name = "(" + target_pair.out_netName + ")"
-            Replaced_name = '(MUX_0_' + str(MUX_O_index) + ")"
+            Replaced_name = '(MUX_O_' + str(MUX_O_index) + ")"
             Vlines[Vlines.index(line)] = Vlines[Vlines.index(line)].replace(Out_name,Replaced_name)
             line = line.replace(Out_name, Replaced_name)
             replaced_gate.append(line)      # result 4: MUX replaced_gate
+    seed += 10
+    programbit += 2
+    MUX_O_index += 1
 
 print ''
 
