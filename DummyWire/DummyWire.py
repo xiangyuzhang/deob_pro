@@ -13,6 +13,7 @@ def abcmap_MUX_OBF_netlist(pi1, pi2, pi3, pi4, output, seed, programbit):
     D_bit1_not = 'D_' + str(programbit) + "_NOT"
     D_bit2_not = 'D_' + str(programbit + 1) + "_NOT"
     new_netlist = []
+    new_netlist_str= ''
     wire = []
     CB = []
     result = []
@@ -28,15 +29,15 @@ def abcmap_MUX_OBF_netlist(pi1, pi2, pi3, pi4, output, seed, programbit):
     new_netlist.append("and2 gate( .a(" + "ED_" + str(seed + 3) + "), .b(" + D_bit2 + "), .O(" + "ED_" + str(seed + 7) + ") );\n")
     new_netlist.append("or2  gate( .a(" +  "ED_" + str(seed + 4) + "), .b(" + "ED_" + str(seed + 5) +"), .O(" + "ED_" + str(seed + 8) +") );\n")
     new_netlist.append("or2  gate( .a(" +  "ED_" + str(seed + 6) + "), .b(" + "ED_" + str(seed + 8) +"), .O(" + "ED_" + str(seed + 9) +") );\n")
-    new_netlist.append("or2  gate( .a(" +  "ED_" + str(seed + 9) + "), .b(" + "ED_" + str(seed + 7) +"), .O(" + str(output) +") );\n")
-
+    new_netlist.append("or2  gate( .a(" +  "ED_" + str(seed + 9) + "), .b(" + "ED_" + str(seed + 7) +"), .O(" + str(output) +") )")
+    new_netlist_str = ('').join(new_netlist)
     wire.append(D_bit1_not)
     wire.append(D_bit2_not)
     for i in range(0,10):
         wire.append("ED_" + str(seed + i))
     CB.append(D_bit1)
     CB.append(D_bit2)
-    result.append(new_netlist)
+    result.append(new_netlist_str)
     result.append(wire)
     result.append(CB)
     result.append(output)
@@ -116,6 +117,9 @@ new_wires = []  # used to contain the new wire necessary in MUX
 new_netlist = []
 replaced_gate = []
 reg_gateName = r'(gate[0-9]+)'
+input_base = "\ninput "
+out_circuit_name = ""
+outxt = ''
 # parser
 parser = argparse.ArgumentParser(usage='python DummyWire.py [-h]  <circuit.v> [number]]', description='This program will camouflage <circuit.v> with dummy wire',)
 parser.add_argument('<circuit.v>', help='input circuit to be camouflaged')
@@ -124,6 +128,10 @@ args = parser.parse_args()
 Num_pair = args.number
 circuitIn = sys.argv[1]
 CircuitPath = os.path.abspath(circuitIn)
+
+with open(circuitIn, 'r') as infile:
+    inV = infile.read()
+    Vlines = inV.replace('\r','').split(';\n')
 
 if not os.path.isfile(CircuitPath):
     print 'Invalid input circuit file!!!\n'
@@ -143,18 +151,41 @@ for target_pair in pair_list:
     programbit += 2
     MUX_O_index += 1
 
-    with open(circuitIn, 'r') as infile:
-        inV = infile.read()
-        Vlines = inV.replace('\r','').split(';\n')
-
     for line in Vlines:
         line = line.replace('\n', '')
         if re.findall(reg_gateName, line) in target_pair.next_gate:
-            line.replace(('(' + target_pair.out_netName + ')'), ('(MUX_O_' + str(MUX_O_index) + ')'))
+            Out_name = "(" + target_pair.out_netName + ")"
+            Replaced_name = '(MUX_0_' + str(MUX_O_index) + ")"
+            Vlines[Vlines.index(line)] = Vlines[Vlines.index(line)].replace(Out_name,Replaced_name)
+            line = line.replace(Out_name, Replaced_name)
             replaced_gate.append(line)      # result 4: MUX replaced_gate
 
 print ''
 
 # content builder
+    # build input
+for input in new_CB:
+    for i in input:
+        input_base += i + ','
+input_base = input_base[:-1]
+input_base += "; //RE__ALLOW(00,01,10,11)"
+
+for find in Vlines:
+    if 'input' in find:
+        Vlines.insert(Vlines.index(find) + 1, input_base)
+        break
+for i in range(0,len(Vlines)):
+    if 'wire' in Vlines[i]:
+        for wire in new_wires:
+            for j in wire:
+                Vlines[i] = Vlines[i] + ',' + j
+        break
+print ''
+for MUX in new_netlist:
+    Vlines.insert(-1, MUX)
 
 # circuit generator
+out_circuit_name = circuitIn.strip('.v') + '-WIRE-' + str(Num_pair) + '.v'
+outxt = (';\n').join(Vlines)
+with open(out_circuit_name, 'w') as outfile:
+    outfile.write(outxt)
