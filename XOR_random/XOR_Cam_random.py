@@ -41,7 +41,7 @@ outputs_copy = []
 new_outputs = []  # used to contain the replaced outputs
 new_gates = []  # used to contain the new xor gated
 X_inputs = []  # used to store the new input
-
+CB = '\ninput '
 target_PIPO = []  # here I will store all the original gate_ame about PIPO
 random.random()
 # random.seed(1)
@@ -53,7 +53,7 @@ wire_info = "" # updated wire will be stored here
 gates_info = [] # updated gates will be stored here
 XOR_info = [] # updade XOR will be stored here
 replaced_PIPO = [] # store the removed PIPO (removed by _new)
-CB = ""
+
 gateline = [] # store Vlines[5:-2]
 
 with open(Camfile, 'r') as infile:
@@ -118,13 +118,15 @@ for line in Vlines:
         line = line.strip(";")
         for old_PIPO in replaced_PIPO:
             line = line +  ',' + old_PIPO
-        wire_info = line + ";"
+        wire_info = line + ""
 
+# write to outfile
 for i in replaced_PIPO:
     with open("Candidate", "a") as outfile:
         outfile.write(i + " ")
 with open("Candidate", "a") as outfile:
     outfile.write("\n")
+
 # from the following block I collect all the XOR gates
 with open(Camfile, 'r') as infile:
     inV = infile.read()
@@ -141,7 +143,9 @@ for line in Vlines:
                 port_out = candidate # make the original input output
                 X_index += 1
                 X_inputs.append(port_in_1)
-                gates_info.append(XOR_model.replace("in_1", port_in_1).replace("in_2", port_in_2).replace("out", port_out))
+                gates_info.append(
+                    XOR_model.replace("in_1", port_in_1).replace("in_2", port_in_2).replace("out", port_out).replace(
+                        ';', ''))
                 temp = replaced_PIPO.index(candidate)
                 replaced_PIPO[temp] = "NULL"
             elif candidate in re.findall(reg, line)[-2:]: # if target in this gate and is a output
@@ -152,7 +156,9 @@ for line in Vlines:
                 port_out = candidate + "_new" # create the new output
                 X_index += 1
                 X_inputs.append(port_in_1)
-                gates_info.append(XOR_model.replace("in_1", port_in_1).replace("in_2", port_in_2).replace("out", port_out))
+                gates_info.append(
+                    XOR_model.replace("in_1", port_in_1).replace("in_2", port_in_2).replace("out", port_out).replace(
+                        ';', ''))
                 temp = replaced_PIPO.index(candidate)
                 replaced_PIPO[temp] = "NULL"
                 # print len(inputs[0])
@@ -164,38 +170,51 @@ with open(Camfile, 'r') as infile:
     inV = infile.read()
     Vlines = inV.replace('\n', '').split(';')
 
+if '/' in Vlines[0]:  # delete the head comment lines
+    Vlines[0] = Vlines[0].split('/')
+    Vlines[0] = Vlines[0][-1]
+    module_index = Vlines[0].index('module')
+    Vlines[0] = Vlines[0][module_index:]
+
+
 if (len(PI_info) == 0):
     PI_info = Vlines[1]
 if (len(PO_info) == 0):
     PO_info = Vlines[3]
 
-Vlines[2] = Vlines[2].strip(";")
-CB = Vlines[2]
+
 for X in range(1, X_index):
-    CB = CB + ',' + 'X_' + str(X)
-CB+=';'
+    CB = CB + 'X_' + str(X) + ','
+CB = CB[:-1]
+
 PI_info = PI_info[:-1]
 PO_info = PO_info[:-1]
-content.append(Vlines[0] + ";\n\n")
-content.append(PI_info + ";\n\n")
-content.append(CB + "\n\n")
-content.append(PO_info + ";\n\n")
-content.append(wire_info + "\n\n")
-for i in Vlines[5:-1]:
-    content.append(i + ";\n")
+for line in Vlines:
+    if 'input' in line:
+        Vlines[Vlines.index(line)] = PI_info
+        break
+for line in Vlines:
+    if 'wire' in line:
+        Vlines[Vlines.index(line)] = wire_info
+        break
+for line in Vlines:
+    if 'input' in line:
+        Vlines.insert(Vlines.index(line) + 1, CB)
+        break
+for line in Vlines:
+    if 'output' in line:
+        Vlines[Vlines.index(line)] = PO_info
+
+Vlines = Vlines[:-1]
 
 for i in gates_info:
-    if ';' in i:
-        content.append(i +  "\n")
-    else:
-        content.append(i +  ";\n")
-content.append("\nendmodule")
+    Vlines.append(i)
+Vlines.append("\nendmodule")
 
+txtout = (';\n').join(Vlines)
 
-
-for i in content:
-    with open(Camfile.replace(".v", "-XOR-" + str(Num_XOR) + ".v"), "a") as outfile:
-        outfile.write(i)
+with open(Camfile.replace(".v", "-XOR-" + str(Num_XOR) + ".v"), "w") as outfile:
+    outfile.write(txtout)
 print ""
 #    if line != '' and line[0] != '/' and not 'module' in line and not 'output' in line and not 'input' in line and not 'wire' in line:
 

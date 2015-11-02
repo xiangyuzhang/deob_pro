@@ -67,6 +67,7 @@ def CircuitScanner(circuitIn, Num_pair):
     # find inv
     while counter <= Num_pair - 1:
         line = Vlines[random_sequence[i]]
+        line = Vlines[133]
         if line!='' and line[0]!='/' and not 'module' in line and not 'input' in line and not 'output' in line and not 'wire' in line:
     # select the input and output, the input should be the output from previous gate(pre_out), the output should be the input for next gate(next_in)
             line_netname = reg_findall(reg_netName, line)

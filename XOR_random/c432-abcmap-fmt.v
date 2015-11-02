@@ -1,15 +1,29 @@
-module c432 (N1,N4,N8,N11,N14,N17,N21,N24,N27,N30,             N34,N37,N40,N43,N47,N50,N53,N56,N60,N63,             N66,N69,N73,N76,N79,N82,N86,N89,N92,N95,             N99,N102,N105,N108,N112,N115,N223,N329,N370,N421,             N430,N431,N432);
+// Verilog
+// c432
+// Ninputs 36
+// Noutputs 7
+// NtotalGates 160
+// NOT1 40
+// NAND2 64
+// NOR2 19
+// AND9 3
+// XOR2 18
+// NAND4 14
+// AND8 1
+// NAND3 1
 
-input N1_new,N4_new,N8_new,N11_new,N14_new,N17_new,N21_new,N24_new,N27_new,N30_new,
-      N34_new,N37_new,N40_new,N43_new,N47_new,N50_new,N53_new,N56_new,N60_new,N63_new,
-      N66_new,N69_new,N73_new,N76_new,N79_new,N82_new,N86_new,N89_new,N92_new,N95_new,
-      N99_new,N102_new,N105_new,N108_new,N112_new,N115_new;
+module c432 (N1,N4,N8,N11,N14,N17,N21,N24,N27,N30,
+             N34,N37,N40,N43,N47,N50,N53,N56,N60,N63,
+             N66,N69,N73,N76,N79,N82,N86,N89,N92,N95,
+             N99,N102,N105,N108,N112,N115,N223,N329,N370,N421,
+             N430,N431,N432);
 
-input p1,p2,p3,p4,X_1,X_2,X_3,X_4,X_5,X_6,X_7,X_8,X_9,X_10,X_11,X_12,X_13,X_14,X_15,X_16,X_17,X_18,X_19,X_20,X_21,X_22,X_23,X_24,X_25,X_26,X_27,X_28,X_29,X_30,X_31,X_32,X_33,X_34,X_35,X_36,X_37,X_38,X_39,X_40,X_41,X_42,X_43;
+input N1,N4,N8,N11,N14,N17,N21,N24,N27,N30,
+      N34,N37,N40,N43,N47,N50,N53,N56,N60,N63,
+      N66,N69,N73,N76,N79,N82,N86,N89,N92,N95,
+      N99,N102,N105,N108,N112,N115;
 
-
-output N223_new,N329_new,N370_new,N421_new,N430_new,N431_new,N432_new;
-
+output N223,N329,N370,N421,N430,N431,N432;
 
 wire N118,N119,N122,N123,N126,N127,N130,N131,N134,N135,
      N138,N139,N142,N143,N146,N147,N150,N151,N154,N157,
@@ -26,8 +40,8 @@ wire N118,N119,N122,N123,N126,N127,N130,N131,N134,N135,
      N354,N355,N356,N357,N360,N371,N372,N373,N374,N375,
      N376,N377,N378,N379,N380,N381,N386,N393,N399,N404,
      N407,N411,N414,N415,N416,N417,N418,N419,N420,N422,
-     N425,N428,N429,
-     N203_NOT,N171_NOT,EX1,EX2,EX3,EX4,EX5,EX6,EX7,EX8,EX9,EX10,N17,N105,N34,N69,N63,N92,N108,N14,N4,N115,N60,N1,N102,N30,N76,N53,N40,N89,N24,N47,N99,N43,N82,N112,N56,N95,N73,N79,N37,N8,N27,N66,N50,N86,N11,N21,N223,N430,N370,N432,N329,N431,N421;
+     N425,N428,N429;
+
 
 inv1 gate1( .a(N1), .O(N118) );
 inv1 gate2( .a(N4), .O(N119) );
@@ -83,19 +97,7 @@ xor2 gate51( .a(N203), .b(N159), .O(N227) );
 xor2 gate52( .a(N203), .b(N162), .O(N230) );
 xor2 gate53( .a(N203), .b(N165), .O(N233) );
 xor2 gate54( .a(N203), .b(N168), .O(N236) );
-inv1 gate( .a(N203),.O(N203_NOT) );
-inv1 gate( .a(N171),.O(N171_NOT));
-and2 gate( .a(N203_NOT), .b(p1), .O(EX1) );
-and2 gate( .a(N171_NOT), .b(EX1), .O(EX2) );
-and2 gate( .a(N203), .b(p2), .O(EX3) );
-and2 gate( .a(N171_NOT), .b(EX3), .O(EX4) );
-and2 gate( .a(N203_NOT), .b(p3), .O(EX5) );
-and2 gate( .a(N171), .b(EX5), .O(EX6) );
-and2 gate( .a(N203), .b(p4), .O(EX7) );
-and2 gate( .a(N171), .b(EX7), .O(EX8) );
-or2  gate( .a(EX2), .b(EX4), .O(EX9) );
-or2  gate( .a(EX6), .b(EX9), .O(EX10) );
-or2  gate( .a(EX8), .b(EX10), .O(N239) );
+xor2 gate55( .a(N203), .b(N171), .O(N239) );
 nand2 gate56( .a(N1), .b(N213), .O(N242) );
 xor2 gate57( .a(N203), .b(N174), .O(N243) );
 nand2 gate58( .a(N213), .b(N11), .O(N246) );
@@ -200,48 +202,6 @@ nand3 gate156( .a(N399), .b(N393), .c(N419), .O(N428) );
 nand4 gate157( .a(N386), .b(N393), .c(N407), .d(N420), .O(N429) );
 nand4 gate158( .a(N381), .b(N386), .c(N422), .d(N399), .O(N430) );
 nand4 gate159( .a(N381), .b(N386), .c(N425), .d(N428), .O(N431) );
-xor2 gate( .a(X_1), .b(N1_new), .O(N1) );
-xor2 gate( .a(X_2), .b(N4_new), .O(N4) );
-xor2 gate( .a(X_3), .b(N11_new), .O(N11) );
-xor2 gate( .a(X_4), .b(N17_new), .O(N17) );
-xor2 gate( .a(X_5), .b(N24_new), .O(N24) );
-xor2 gate( .a(X_6), .b(N30_new), .O(N30) );
-xor2 gate( .a(X_7), .b(N37_new), .O(N37) );
-xor2 gate( .a(X_8), .b(N43_new), .O(N43) );
-xor2 gate( .a(X_9), .b(N50_new), .O(N50) );
-xor2 gate( .a(X_10), .b(N56_new), .O(N56) );
-xor2 gate( .a(X_11), .b(N63_new), .O(N63) );
-xor2 gate( .a(X_12), .b(N69_new), .O(N69) );
-xor2 gate( .a(X_13), .b(N76_new), .O(N76) );
-xor2 gate( .a(X_14), .b(N82_new), .O(N82) );
-xor2 gate( .a(X_15), .b(N89_new), .O(N89) );
-xor2 gate( .a(X_16), .b(N95_new), .O(N95) );
-xor2 gate( .a(X_17), .b(N102_new), .O(N102) );
-xor2 gate( .a(X_18), .b(N108_new), .O(N108) );
-xor2 gate( .a(X_19), .b(N8_new), .O(N8) );
-xor2 gate( .a(X_20), .b(N14_new), .O(N14) );
-xor2 gate( .a(X_21), .b(N21_new), .O(N21) );
-xor2 gate( .a(X_22), .b(N27_new), .O(N27) );
-xor2 gate( .a(X_23), .b(N34_new), .O(N34) );
-xor2 gate( .a(X_24), .b(N40_new), .O(N40) );
-xor2 gate( .a(X_25), .b(N47_new), .O(N47) );
-xor2 gate( .a(X_26), .b(N53_new), .O(N53) );
-xor2 gate( .a(X_27), .b(N60_new), .O(N60) );
-xor2 gate( .a(X_28), .b(N66_new), .O(N66) );
-xor2 gate( .a(X_29), .b(N73_new), .O(N73) );
-xor2 gate( .a(X_30), .b(N79_new), .O(N79) );
-xor2 gate( .a(X_31), .b(N86_new), .O(N86) );
-xor2 gate( .a(X_32), .b(N92_new), .O(N92) );
-xor2 gate( .a(X_33), .b(N99_new), .O(N99) );
-xor2 gate( .a(X_34), .b(N105_new), .O(N105) );
-xor2 gate( .a(X_35), .b(N112_new), .O(N112) );
-xor2 gate( .a(X_36), .b(N115_new), .O(N115) );
-xor2 gate( .a(X_37), .b(N223), .O(N223_new) );
-xor2 gate( .a(X_38), .b(N329), .O(N329_new) );
-xor2 gate( .a(X_39), .b(N370), .O(N370_new) );
-xor2 gate( .a(X_40), .b(N421), .O(N421_new) );
-xor2 gate( .a(X_41), .b(N430), .O(N430_new) );
-xor2 gate( .a(X_42), .b(N431), .O(N431_new) );
-xor2 gate( .a(X_43), .b(N432), .O(N432_new) );
+nand4 gate160( .a(N381), .b(N422), .c(N425), .d(N429), .O(N432) );
 
 endmodule
