@@ -185,9 +185,13 @@ if (len(PO_info) == 0):
 
 for X in range(1, X_index):
     CB = CB + 'X_' + str(X) + ','
-CB = CB[:-1]
+CB = CB[:-1] + " //RE__ALLOW(0)"
 
-PI_info = PI_info[:-1]
+if "RE__ALLOW" in PI_info:
+    PI_info = PI_info[:-1]
+else:
+    PI_info = PI_info[:-1] + "  //RE__PI"
+
 PO_info = PO_info[:-1]
 for line in Vlines:
     if 'input' in line:
