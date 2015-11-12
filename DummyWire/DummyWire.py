@@ -57,6 +57,8 @@ def find_backup_Mux_in(circuitIn):
     for line in Vlines:
         line = line.replace('\n', '')
         if 'input' in line:
+            if '//RE_' in line:
+                line = line[:line.find('//RE_')]
             PIs=re.search(r'(?<=input )(.*)(?=$)', line).group().replace(' ','').split(',')
             for pi in PIs:
                 pi = pi.replace('\\','').replace('[','').replace(']','')
@@ -69,7 +71,7 @@ def random_sequence_generator(limit_num, select_range):
 
     random_counter = 1
     random.random()
-    random.seed(1)
+#    random.seed(1)
     random_sequence = []
     while random_counter < limit_num:
         temp = random.randint(0, select_range-1)
@@ -91,18 +93,10 @@ def camouflage_builder(target_pair, back_up_MUX_in, seed, programbit, output):
     CB = []     # contain extra CB
     netlist = []
 
-    this_gate_in_net = target_pair.in_netName
     this_gate_out_net = target_pair.out_netName
-    if len(target_pair.in_netName) >= 4:
-        result = abcmap_MUX_OBF_netlist(this_gate_in_net[0], this_gate_in_net[1], this_gate_in_net[2], this_gate_out_net, output, seed, programbit)
-    else:
-        random_sequence = random_sequence_generator((4 - len(this_gate_in_net)), len(back_up_MUX_in))
-        if len(this_gate_in_net) is 1:
-            result = abcmap_MUX_OBF_netlist(this_gate_in_net[0], back_up_MUX_in[random_sequence[0]], back_up_MUX_in[random_sequence[1]],this_gate_out_net, output, seed, programbit)
-        elif len(this_gate_in_net) is 2:
-            result = abcmap_MUX_OBF_netlist(this_gate_in_net[0], this_gate_in_net[1], back_up_MUX_in[random_sequence[0]],this_gate_out_net, output, seed, programbit)
-        elif len(this_gate_in_net) is 3:
-            result = abcmap_MUX_OBF_netlist(this_gate_in_net[0], this_gate_in_net[1], this_gate_in_net[2],this_gate_out_net, output, seed, programbit)
+    random_sequence = random_sequence_generator(4, len(back_up_MUX_in))
+    result = abcmap_MUX_OBF_netlist(back_up_MUX_in[random_sequence[0]], this_gate_out_net, back_up_MUX_in[random_sequence[2]], this_gate_out_net,output,seed,programbit)
+
 
     return result
 
@@ -169,7 +163,7 @@ for input in new_CB:
     for i in input:
         input_base += i + ','
 input_base = input_base[:-1]
-input_base += "; //RE__ALLOW(00,01,10,11)"
+input_base += " //RE__ALLOW(00,01,10,11)"
 
 for find in Vlines:
     if 'input' in find:
@@ -184,7 +178,11 @@ for i in range(0,len(Vlines)):
 print ''
 for MUX in new_netlist:
     Vlines.insert(-1, MUX)
-
+for line in Vlines:
+    if 'input' in line:
+        if 'RE__' not in line:
+            Vlines[Vlines.index(line)] = Vlines[Vlines.index(line)] + ' //RE__PI'
+            break
 # circuit generator
 out_circuit_name = circuitIn.strip('.v') + '-WIRE-' + str(Num_pair) + '.v'
 outxt = (';\n').join(Vlines)
