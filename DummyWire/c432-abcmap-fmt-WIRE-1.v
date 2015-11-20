@@ -11,7 +11,7 @@ input N1,N4,N8,N11,N14,N17,N21,N24,N27,N30,
       N66,N69,N73,N76,N79,N82,N86,N89,N92,N95,
       N99,N102,N105,N108,N112,N115 //RE__PI;
 
-input D_0,D_1,D_2,D_3 //RE__ALLOW(00,01,10,11);
+input D_0,D_1 //RE__ALLOW(00,01,10,11);
 
 output N223,N329,N370,N421,N430,N431,N432;
 
@@ -30,7 +30,7 @@ wire N118,N119,N122,N123,N126,N127,N130,N131,N134,N135,
      N354,N355,N356,N357,N360,N371,N372,N373,N374,N375,
      N376,N377,N378,N379,N380,N381,N386,N393,N399,N404,
      N407,N411,N414,N415,N416,N417,N418,N419,N420,N422,
-     N425,N428,N429,D_0_NOT,D_1_NOT,MUX_O_0,ED_0,ED_1,ED_2,ED_3,ED_4,ED_5,ED_6,ED_7,ED_8,ED_9,D_2_NOT,D_3_NOT,MUX_O_1,ED_10,ED_11,ED_12,ED_13,ED_14,ED_15,ED_16,ED_17,ED_18,ED_19;
+     N425,N428,N429,D_0_NOT,D_1_NOT,MUX_O_0,ED_0,ED_1,ED_2,ED_3,ED_4,ED_5,ED_6,ED_7,ED_8,ED_9;
 
 
 inv1 gate1( .a(N1), .O(N118) );
@@ -78,12 +78,12 @@ nor2 gate42( .a(N99), .b(N147), .O(N195) );
 nor2 gate43( .a(N105), .b(N147), .O(N196) );
 nor2 gate44( .a(N112), .b(N151), .O(N197) );
 nor2 gate45( .a(N115), .b(N151), .O(N198) );
-and9 gate46( .a(N154), .b(MUX_O_0), .c(N162), .d(N165), .e(N168), .f(N171), .g(N174), .h(N177), .i(N180), .O(N199) );
+and9 gate46( .a(N154), .b(N159), .c(N162), .d(N165), .e(N168), .f(N171), .g(N174), .h(N177), .i(N180), .O(N199) );
 inv1 gate47( .a(N199), .O(N203) );
 inv1 gate48( .a(N199), .O(N213) );
 inv1 gate49( .a(N199), .O(N223) );
 xor2 gate50( .a(N203), .b(N154), .O(N224) );
-xor2 gate51( .a(N203), .b(MUX_O_0), .O(N227) );
+xor2 gate51( .a(N203), .b(N159), .O(N227) );
 xor2 gate52( .a(N203), .b(N162), .O(N230) );
 xor2 gate53( .a(N203), .b(N165), .O(N233) );
 xor2 gate54( .a(N203), .b(N168), .O(N236) );
@@ -118,7 +118,7 @@ nand2 gate82( .a(N239), .b(N192), .O(N292) );
 nand2 gate83( .a(N243), .b(N194), .O(N293) );
 nand2 gate84( .a(N247), .b(N196), .O(N294) );
 nand2 gate85( .a(N251), .b(N198), .O(N295) );
-and9 gate86( .a(N260), .b(N264), .c(N267), .d(N270), .e(N273), .f(N276), .g(N279), .h(N282), .i(N285), .O(N296) );
+and9 gate86( .a(N260), .b(N264), .c(N267), .d(N270), .e(N273), .f(N276), .g(N279), .h(MUX_O_0), .i(N285), .O(N296) );
 inv1 gate87( .a(N263), .O(N300) );
 inv1 gate88( .a(N288), .O(N301) );
 inv1 gate89( .a(N289), .O(N302) );
@@ -142,7 +142,7 @@ xor2 gate106( .a(N309), .b(N276), .O(N337) );
 nand2 gate107( .a(N319), .b(N34), .O(N338) );
 xor2 gate108( .a(N309), .b(N279), .O(N339) );
 nand2 gate109( .a(N319), .b(N47), .O(N340) );
-xor2 gate110( .a(N309), .b(N282), .O(N341) );
+xor2 gate110( .a(N309), .b(MUX_O_0), .O(N341) );
 nand2 gate111( .a(N319), .b(N60), .O(N342) );
 xor2 gate112( .a(N309), .b(N285), .O(N343) );
 nand2 gate113( .a(N319), .b(N73), .O(N344) );
@@ -195,29 +195,16 @@ nand4 gate159( .a(N381), .b(N386), .c(N425), .d(N428), .O(N431) );
 nand4 gate160( .a(N381), .b(N422), .c(N425), .d(N429), .O(N432) );
 inv1 gate( .a(D_0),.O(D_0_NOT) );
 inv1 gate( .a(D_1),.O(D_1_NOT) );
-and2 gate( .a(N14), .b(D_0_NOT), .O(ED_0) );
-and2 gate( .a(N159), .b(D_0), .O(ED_1) );
-and2 gate( .a(N89), .b(D_0_NOT), .O(ED_2) );
-and2 gate( .a(N159), .b(D_0), .O(ED_3) );
-and2 gate( .a(ED_0), .b(D_1_NOT), .O(ED_4) );
-and2 gate( .a(ED_1), .b(D_1), .O(ED_5) );
-and2 gate( .a(ED_2), .b(D_1_NOT), .O(ED_6) );
-and2 gate( .a(ED_3), .b(D_1), .O(ED_7) );
-or2  gate( .a(ED_4), .b(ED_5), .O(ED_8) );
-or2  gate( .a(ED_6), .b(ED_8), .O(ED_9) );
-or2  gate( .a(ED_9), .b(ED_7), .O(MUX_O_0) );
-inv1 gate( .a(D_2),.O(D_2_NOT) );
-inv1 gate( .a(D_3),.O(D_3_NOT) );
-and2 gate( .a(N14), .b(D_2_NOT), .O(ED_10) );
-and2 gate( .a(N159), .b(D_2), .O(ED_11) );
-and2 gate( .a(N89), .b(D_2_NOT), .O(ED_12) );
-and2 gate( .a(N159), .b(D_2), .O(ED_13) );
-and2 gate( .a(ED_10), .b(D_3_NOT), .O(ED_14) );
-and2 gate( .a(ED_11), .b(D_3), .O(ED_15) );
-and2 gate( .a(ED_12), .b(D_3_NOT), .O(ED_16) );
-and2 gate( .a(ED_13), .b(D_3), .O(ED_17) );
-or2  gate( .a(ED_14), .b(ED_15), .O(ED_18) );
-or2  gate( .a(ED_16), .b(ED_18), .O(ED_19) );
-or2  gate( .a(ED_19), .b(ED_17), .O(MUX_O_1) );
+and2 gate( .a(N92), .b(D_0_NOT), .O(ED_0) );
+and2 gate( .a(N282), .b(D_0_NOT), .O(ED_1) );
+and2 gate( .a(N102), .b(D_0), .O(ED_2) );
+and2 gate( .a(N282), .b(D_0), .O(ED_3) );
+and2 gate( .a(ED_0), .b(D_1_NOT), .O(ED_9) );
+and2 gate( .a(ED_1), .b(D_1), .O(ED_7) );
+and2 gate( .a(ED_2), .b(D_1_NOT), .O(ED_5) );
+and2 gate( .a(ED_3), .b(D_1), .O(ED_4) );
+or2  gate( .a(ED_4), .b(ED_5), .O(ED_6) );
+or2  gate( .a(ED_6), .b(ED_7), .O(ED_8) );
+or2  gate( .a(ED_9), .b(ED_8), .O(MUX_O_0) );
 
 endmodule

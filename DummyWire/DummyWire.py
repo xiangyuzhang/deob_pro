@@ -20,16 +20,16 @@ def abcmap_MUX_OBF_netlist(pi1, pi2, pi3, pi4, output, seed, programbit):
     new_netlist.append("inv1 gate( .a(" + D_bit1 + "),.O(" +  D_bit1_not + ") );\n")
     new_netlist.append("inv1 gate( .a(" + D_bit2 + "),.O(" +  D_bit2_not + ") );\n")
     new_netlist.append("and2 gate( .a(" + pi1 + "), .b(" + D_bit1_not + "), .O(" + "ED_" + str(seed) + ") );\n")
-    new_netlist.append("and2 gate( .a(" + pi2 + "), .b(" + D_bit1 + "), .O(" + "ED_" + str(seed + 1) + ") );\n")
-    new_netlist.append("and2 gate( .a(" + pi3 + "), .b(" + D_bit1_not + "), .O(" + "ED_" + str(seed + 2) + ") );\n")
+    new_netlist.append("and2 gate( .a(" + pi2 + "), .b(" + D_bit1_not + "), .O(" + "ED_" + str(seed + 1) + ") );\n")
+    new_netlist.append("and2 gate( .a(" + pi3 + "), .b(" + D_bit1 + "), .O(" + "ED_" + str(seed + 2) + ") );\n")
     new_netlist.append("and2 gate( .a(" + pi4 + "), .b(" + D_bit1 + "), .O(" + "ED_" + str(seed + 3) + ") );\n")
-    new_netlist.append("and2 gate( .a(" + "ED_" + str(seed) + "), .b(" + D_bit2_not + "), .O(" + "ED_" + str(seed + 4) + ") );\n")
-    new_netlist.append("and2 gate( .a(" + "ED_" + str(seed + 1) + "), .b(" + D_bit2 + "), .O(" + "ED_" + str(seed + 5) + ") );\n")
-    new_netlist.append("and2 gate( .a(" + "ED_" + str(seed + 2) + "), .b(" + D_bit2_not + "), .O(" + "ED_" + str(seed + 6) + ") );\n")
-    new_netlist.append("and2 gate( .a(" + "ED_" + str(seed + 3) + "), .b(" + D_bit2 + "), .O(" + "ED_" + str(seed + 7) + ") );\n")
-    new_netlist.append("or2  gate( .a(" +  "ED_" + str(seed + 4) + "), .b(" + "ED_" + str(seed + 5) +"), .O(" + "ED_" + str(seed + 8) +") );\n")
-    new_netlist.append("or2  gate( .a(" +  "ED_" + str(seed + 6) + "), .b(" + "ED_" + str(seed + 8) +"), .O(" + "ED_" + str(seed + 9) +") );\n")
-    new_netlist.append("or2  gate( .a(" +  "ED_" + str(seed + 9) + "), .b(" + "ED_" + str(seed + 7) +"), .O(" + str(output) +") )")
+    new_netlist.append("and2 gate( .a(" + "ED_" + str(seed) + "), .b(" + D_bit2_not + "), .O(" + "ED_" + str(seed + 9) + ") );\n")
+    new_netlist.append("and2 gate( .a(" + "ED_" + str(seed + 1) + "), .b(" + D_bit2 + "), .O(" + "ED_" + str(seed + 7) + ") );\n")
+    new_netlist.append("and2 gate( .a(" + "ED_" + str(seed + 2) + "), .b(" + D_bit2_not + "), .O(" + "ED_" + str(seed + 5) + ") );\n")
+    new_netlist.append("and2 gate( .a(" + "ED_" + str(seed + 3) + "), .b(" + D_bit2 + "), .O(" + "ED_" + str(seed + 4) + ") );\n")
+    new_netlist.append("or2  gate( .a(" +  "ED_" + str(seed + 4) + "), .b(" + "ED_" + str(seed + 5) +"), .O(" + "ED_" + str(seed + 6) +") );\n")
+    new_netlist.append("or2  gate( .a(" +  "ED_" + str(seed + 6) + "), .b(" + "ED_" + str(seed + 7) +"), .O(" + "ED_" + str(seed + 8) +") );\n")
+    new_netlist.append("or2  gate( .a(" +  "ED_" + str(seed + 9) + "), .b(" + "ED_" + str(seed + 8) +"), .O(" + str(output) +") )")
     new_netlist_str = ('').join(new_netlist)
     wire.append(D_bit1_not)
     wire.append(D_bit2_not)
@@ -128,6 +128,7 @@ CircuitPath = os.path.abspath(circuitIn)
 with open(circuitIn, 'r') as infile:
     inV = infile.read()
     Vlines = inV.replace('\r','').split(';\n')
+
 
 if not os.path.isfile(CircuitPath):
     print 'Invalid input circuit file!!!\n'

@@ -2,130 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="230893b0-c811-4a50-9932-44c4d9b51a86" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../non_incremental_compatible/c17-abcmap-fmt-WIRE-1.v" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../non_incremental_compatible/c17-abcmap-fmt-WIRE-3.v" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../non_incremental_compatible/c17-abcmap-fmt-WIRE-4.v" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../non_incremental_compatible/c17-abcmap-fmt-WIRE-5.v" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../non_incremental_compatible/c17-abcmap-fmt-WIRE-6.v" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/c17-abcmap-fmt.v" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../non_incremental_compatible/c432-abcmap-fmt-WIRE-1.v" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/c432-abcmap-fmt.v" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../non_incremental_compatible/c432-abcmap-fmt.v" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/c3540-mux4-1.v" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/c499-mux4-1-XOR-2-revised-norm.v" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../XOR_random/.idea/.name" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../XOR_random/.idea/XOR_random.iml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../XOR_random/.idea/misc.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../XOR_random/.idea/modules.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../XOR_random/.idea/vcs.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../XOR_random/.idea/workspace.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../XOR_random/Candidate" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../XOR_random/XOR_Cam_random.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../XOR_random/c432-abcmap-fmt.v" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../XOR_random/c432-mux4-1.v" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../XOR_random/tem.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../XOR_random/test.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../XOR_random/随机外部加密流程说明书.itmz" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../format_change/.idea/.name" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../format_change/.idea/format_change.iml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../format_change/.idea/misc.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../format_change/.idea/modules.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../format_change/.idea/vcs.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../format_change/.idea/workspace.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../format_change/Description" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../format_change/EC_lib.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../format_change/EC_shell.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../format_change/Main.cc" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../format_change/Main.o" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../format_change/Makefile" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../format_change/SimpSolver.cc" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../format_change/SimpSolver.h" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../format_change/SimpSolver.o" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../format_change/c499-abcmap-fmt-wPI.cnf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../format_change/c499-abcmap-fmt-wPI.log" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../format_change/c499-abcmap-fmt.v" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../format_change/c499-mux4-1-XOR-2-1stMtr.cnf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../format_change/c499-mux4-1-XOR-2-1stMtr.log" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../format_change/c499-mux4-1-XOR-2-_findSolu.cnf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../format_change/c499-mux4-1-XOR-2-_findSolu.log" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../format_change/c499-mux4-1-XOR-2-comp-cons.cnf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../format_change/c499-mux4-1-XOR-2-comp-cons.log" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../format_change/c499-mux4-1-XOR-2-revised-1stMtr.cnf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../format_change/c499-mux4-1-XOR-2-revised-1stMtr.log" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../format_change/c499-mux4-1-XOR-2-revised-_findSolu.cnf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../format_change/c499-mux4-1-XOR-2-revised-_findSolu.log" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../format_change/c499-mux4-1-XOR-2-revised-comp-cons.cnf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../format_change/c499-mux4-1-XOR-2-revised-comp-cons.log" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../format_change/c499-mux4-1-XOR-2-revised-norm-1stMtr.cnf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../format_change/c499-mux4-1-XOR-2-revised-norm-1stMtr.log" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../format_change/c499-mux4-1-XOR-2-revised-norm-_findSolu.cnf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../format_change/c499-mux4-1-XOR-2-revised-norm-_findSolu.log" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../format_change/c499-mux4-1-XOR-2-revised-norm-comp-cons.cnf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../format_change/c499-mux4-1-XOR-2-revised-norm-comp-cons.log" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../format_change/c499-mux4-1-XOR-2-revised-norm.v" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../format_change/c499-mux4-1-XOR-2-revised.v" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../format_change/c499-mux4-1-XOR-2.v" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../format_change/c7552-abcmap-fmt.v" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../format_change/c7552-mux4-201.v" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../format_change/completeset.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../format_change/decam-incre.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../format_change/decam-v5-cmmdline.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../format_change/depend.mk" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../format_change/finalSolu.cnf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../format_change/finalSolu.log" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../format_change/findSolution.log" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../format_change/gatedic.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../format_change/genMtrs.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../format_change/genNewPO.log" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../format_change/grabNodes.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../format_change/iniSatLog" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../format_change/method_CBassign.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../format_change/method_PIgenerator.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../format_change/method_XOROR.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../format_change/method_connectPIindex.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../format_change/method_grabNodes.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../format_change/method_v2cnf.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../format_change/minisat-incre-simp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../format_change/nonIncreIterationInfo.log" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../format_change/test.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../format_change/test_orig" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../format_change/test_revised" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../format_change/testforbid.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../format_change/testforbid_single.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../format_change/tmpIn.cnf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../format_change/tmpSAT.log" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../format_change_incre/Description" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../format_change_incre/Main.cc" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../format_change_incre/Main.o" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../format_change_incre/Makefile" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../format_change_incre/PIs.log" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../format_change_incre/SimpSolver.cc" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../format_change_incre/SimpSolver.h" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../format_change_incre/SimpSolver.o" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../format_change_incre/c499-abcmap-fmt.v" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../format_change_incre/c499-mux4-1-XOR-2-revised-norm.v" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../format_change_incre/c499-mux4-1-XOR-2-revised.v" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../format_change_incre/c499-mux4-1-XOR-2.v" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../format_change_incre/completeset.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../format_change_incre/controlPairs.log" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../format_change_incre/decam-incre.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../format_change_incre/depend.mk" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../format_change_incre/finalSolu.cnf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../format_change_incre/finalSolu.log" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../format_change_incre/genMtrs.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../format_change_incre/grabNodes.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../format_change_incre/increIterationInfo.log" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../format_change_incre/increIterationSolution.log" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../format_change_incre/minisat-incre-simp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../format_change_incre/testforbid.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../format_change_incre/testforbid_single.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../format_change_incre/tmpIn.cnf" afterPath="" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/encodings.xml" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/c17-abcmap-fmt-WIRE-5.v" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/c17-abcmap-fmt.v" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/c432-abcmap-fmt-WIRE-1.v" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/c432-mux4-1.v" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DummyWire.py" afterPath="$PROJECT_DIR$/DummyWire.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wire_CircuitScanner.py" afterPath="$PROJECT_DIR$/wire_CircuitScanner.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/c432-abcmap-fmt.v" afterPath="$PROJECT_DIR$/c432-abcmap-fmt.v" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="DummyWire.iws" />
     <ignored path=".idea/workspace.xml" />
+    <ignored path=".idea/dataSources.local.xml" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -134,6 +22,9 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />
+  <component name="CoverageDataManager">
+    <SUITE FILE_PATH="coverage/DummyWire$DummyWire.coverage" NAME="DummyWire Coverage Results" MODIFIED="1447988395206" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+  </component>
   <component name="CreatePatchCommitExecutor">
     <option name="PATCH_PATH" value="" />
   </component>
@@ -143,48 +34,44 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="wire_CircuitScanner.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/wire_CircuitScanner.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="86" column="0" selection-start-line="86" selection-start-column="0" selection-end-line="86" selection-end-column="0" />
-              <folding>
-                <element signature="e#0#15#0" expanded="true" />
-                <element signature="e#110#302#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="DummyWire.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/DummyWire.py">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="181" column="0" selection-start-line="181" selection-start-column="0" selection-end-line="181" selection-end-column="0" />
+              <caret line="97" column="89" selection-start-line="97" selection-start-column="89" selection-end-line="97" selection-end-column="89" />
               <folding>
                 <element signature="e#28#43#0" expanded="true" />
-                <element signature="e#2579#3045#0" expanded="false" />
-                <element signature="e#3161#3471#0" expanded="false" />
+                <element signature="e#3242#3553#0" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="c7552-abcmap-fmt.v" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/c7552-abcmap-fmt.v">
+      <file leaf-file-name="c432-abcmap-fmt-WIRE-1.v" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/c432-abcmap-fmt-WIRE-1.v">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="1995" column="14" selection-start-line="1995" selection-start-column="6" selection-end-line="1995" selection-end-column="14" />
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="c432-abcmap-fmt.v" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/c432-abcmap-fmt.v">
+      <file leaf-file-name="c432-abcmap-fmt-WIRE-10.v" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/c432-abcmap-fmt-WIRE-10.v">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.024311183">
+              <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="EXE_circuitScanner.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/EXE_circuitScanner.py">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <caret line="101" column="26" selection-start-line="101" selection-start-column="26" selection-end-line="101" selection-end-column="26" />
               <folding />
             </state>
           </provider>
@@ -215,20 +102,25 @@
         <option value="$PROJECT_DIR$/c17-abcmap-fmt.v" />
         <option value="$PROJECT_DIR$/c17-abcmap-fmt-WIRE-6.v" />
         <option value="$PROJECT_DIR$/c17-abcmap-fmt-WIRE-1.v" />
+        <option value="$PROJECT_DIR$/wire_CircuitScanner.py" />
         <option value="$PROJECT_DIR$/c432-abcmap-fmt.v" />
         <option value="$PROJECT_DIR$/DummyWire.py" />
-        <option value="$PROJECT_DIR$/wire_CircuitScanner.py" />
       </list>
     </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" />
+  <component name="JsBuildToolPackageJson" detection-done="true" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
   </component>
   <component name="NamedScopeManager">
     <order />
   </component>
   <component name="ProjectFrameBounds">
     <option name="x" value="-1920" />
-    <option name="y" value="-246" />
+    <option name="y" value="-223" />
     <option name="width" value="1920" />
-    <option name="height" value="1080" />
+    <option name="height" value="1053" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -272,8 +164,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scratches" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -294,13 +184,15 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../test_dumy" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../checker" />
     <property name="recentsLimit" value="5" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="restartRequiresConfirmation" value="true" />
-    <property name="FullScreen" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -320,6 +212,7 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="DummyWire" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/wire_CircuitScanner.py" />
       <option name="PARAMETERS" value="c7552-mux4-1-XOR-2.v" />
       <option name="SHOW_COMMAND_LINE" value="false" />
@@ -337,6 +230,7 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="DummyWire" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/re_test.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
@@ -354,6 +248,7 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="DummyWire" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/EXE_circuitScanner.py" />
       <option name="PARAMETERS" value="c432-mux4-1.v 7" />
       <option name="SHOW_COMMAND_LINE" value="false" />
@@ -371,6 +266,7 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="DummyWire" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/DummyWire.py" />
       <option name="PARAMETERS" value="c432-abcmap-fmt.v 1" />
       <option name="SHOW_COMMAND_LINE" value="false" />
@@ -388,6 +284,7 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="DummyWire" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
@@ -403,6 +300,7 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="DummyWire" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="" />
       <option name="CLASS_NAME" value="" />
       <option name="METHOD_NAME" value="" />
@@ -422,6 +320,7 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="DummyWire" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="" />
       <option name="CLASS_NAME" value="" />
       <option name="METHOD_NAME" value="" />
@@ -441,6 +340,7 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="DummyWire" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="" />
       <option name="CLASS_NAME" value="" />
       <option name="METHOD_NAME" value="" />
@@ -462,6 +362,7 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="DummyWire" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="" />
       <option name="CLASS_NAME" value="" />
       <option name="METHOD_NAME" value="" />
@@ -484,6 +385,7 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="DummyWire" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="" />
       <option name="CLASS_NAME" value="" />
       <option name="METHOD_NAME" value="" />
@@ -576,28 +478,30 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-1920" y="-246" width="1920" height="1080" extended-state="0" />
+    <frame x="-1920" y="-223" width="1920" height="1053" extended-state="0" />
     <editor active="false" />
     <layout>
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32970297" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32882413" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.11795682" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.17272249" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.36524454" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3250988" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3298647" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32970297" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Concurrent Activities Diagram" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32905138" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.36534652" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32574257" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -632,38 +536,23 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="python-line">
           <url>file://$PROJECT_DIR$/DummyWire.py</url>
-          <line>179</line>
+          <line>182</line>
           <option name="timeStamp" value="178" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="python-line">
           <url>file://$PROJECT_DIR$/DummyWire.py</url>
-          <line>180</line>
+          <line>183</line>
           <option name="timeStamp" value="179" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="python-line">
           <url>file://$PROJECT_DIR$/DummyWire.py</url>
-          <line>181</line>
+          <line>184</line>
           <option name="timeStamp" value="180" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="python-line">
           <url>file://$PROJECT_DIR$/DummyWire.py</url>
-          <line>134</line>
-          <option name="timeStamp" value="225" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="python-line">
-          <url>file://$PROJECT_DIR$/wire_CircuitScanner.py</url>
-          <line>84</line>
-          <option name="timeStamp" value="226" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="python-line">
-          <url>file://$PROJECT_DIR$/wire_CircuitScanner.py</url>
-          <line>85</line>
-          <option name="timeStamp" value="229" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="python-line">
-          <url>file://$PROJECT_DIR$/wire_CircuitScanner.py</url>
-          <line>86</line>
-          <option name="timeStamp" value="230" />
+          <line>137</line>
+          <option name="timeStamp" value="241" />
         </line-breakpoint>
       </breakpoints>
       <breakpoints-dialog>
@@ -676,7 +565,7 @@
           </properties>
         </breakpoint>
       </default-breakpoints>
-      <option name="time" value="231" />
+      <option name="time" value="242" />
     </breakpoint-manager>
     <watches-manager>
       <configuration name="PythonConfigurationType">
@@ -687,29 +576,19 @@
         <watch expression="counter" language="Python" />
         <watch expression="pair_list" language="Python" />
         <watch expression="Num_pair -1" language="Python" />
+        <watch expression="delete_slash" language="Python" />
+        <watch expression="Vlines" language="Python" />
       </configuration>
     </watches-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/wire_CircuitScanner.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="86" column="0" selection-start-line="86" selection-start-column="0" selection-end-line="86" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#15#0" expanded="true" />
-            <element signature="e#110#302#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/DummyWire.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="181" column="0" selection-start-line="181" selection-start-column="0" selection-end-line="181" selection-end-column="0" />
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#28#43#0" expanded="true" />
-            <element signature="e#2579#3045#0" expanded="false" />
-            <element signature="e#3161#3471#0" expanded="false" />
+            <element signature="e#3242#3553#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -722,10 +601,97 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/c432-abcmap-fmt.v">
+    <entry file="file://$PROJECT_DIR$/c7552-abcmap-fmt.v">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <caret line="1995" column="14" selection-start-line="1995" selection-start-column="6" selection-end-line="1995" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wire_CircuitScanner.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="87" column="0" selection-start-line="87" selection-start-column="0" selection-end-line="87" selection-end-column="0" />
+          <folding>
+            <element signature="e#110#302#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DummyWire.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="183" column="0" selection-start-line="183" selection-start-column="0" selection-end-line="183" selection-end-column="0" />
+          <folding>
+            <element signature="e#28#43#0" expanded="true" />
+            <element signature="e#3242#3553#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/c7552-abcmap-fmt.v">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="1995" column="14" selection-start-line="1995" selection-start-column="6" selection-end-line="1995" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wire_CircuitScanner.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="86" column="0" selection-start-line="86" selection-start-column="0" selection-end-line="86" selection-end-column="0" />
+          <folding>
+            <element signature="e#110#302#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DummyWire.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="181" column="0" selection-start-line="181" selection-start-column="0" selection-end-line="181" selection-end-column="0" />
+          <folding>
+            <element signature="e#28#43#0" expanded="true" />
+            <element signature="e#3242#3553#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/c7552-abcmap-fmt.v">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="1995" column="14" selection-start-line="1995" selection-start-column="6" selection-end-line="1995" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wire_CircuitScanner.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="86" column="0" selection-start-line="86" selection-start-column="0" selection-end-line="86" selection-end-column="0" />
+          <folding>
+            <element signature="e#110#302#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DummyWire.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="181" column="0" selection-start-line="181" selection-start-column="0" selection-end-line="181" selection-end-column="0" />
+          <folding>
+            <element signature="e#28#43#0" expanded="true" />
+            <element signature="e#3242#3553#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/c7552-abcmap-fmt.v">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="1995" column="14" selection-start-line="1995" selection-start-column="6" selection-end-line="1995" selection-end-column="14" />
           <folding />
         </state>
       </provider>
@@ -735,7 +701,6 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="117" column="0" selection-start-line="117" selection-start-column="0" selection-end-line="117" selection-end-column="0" />
           <folding>
-            <element signature="e#0#15#0" expanded="true" />
             <element signature="e#110#302#0" expanded="false" />
           </folding>
         </state>
@@ -747,8 +712,7 @@
           <caret line="96" column="89" selection-start-line="96" selection-start-column="89" selection-end-line="96" selection-end-column="89" />
           <folding>
             <element signature="e#28#43#0" expanded="true" />
-            <element signature="e#2579#3045#0" expanded="false" />
-            <element signature="e#3161#3471#0" expanded="false" />
+            <element signature="e#3242#3553#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -758,7 +722,6 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="117" column="0" selection-start-line="117" selection-start-column="0" selection-end-line="117" selection-end-column="0" />
           <folding>
-            <element signature="e#0#15#0" expanded="true" />
             <element signature="e#110#302#0" expanded="false" />
           </folding>
         </state>
@@ -770,8 +733,7 @@
           <caret line="96" column="89" selection-start-line="96" selection-start-column="89" selection-end-line="96" selection-end-column="89" />
           <folding>
             <element signature="e#28#43#0" expanded="true" />
-            <element signature="e#2579#3045#0" expanded="false" />
-            <element signature="e#3161#3471#0" expanded="false" />
+            <element signature="e#3242#3553#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -781,7 +743,6 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="117" column="0" selection-start-line="117" selection-start-column="0" selection-end-line="117" selection-end-column="0" />
           <folding>
-            <element signature="e#0#15#0" expanded="true" />
             <element signature="e#110#302#0" expanded="false" />
           </folding>
         </state>
@@ -793,8 +754,7 @@
           <caret line="96" column="89" selection-start-line="96" selection-start-column="89" selection-end-line="96" selection-end-column="89" />
           <folding>
             <element signature="e#28#43#0" expanded="true" />
-            <element signature="e#2579#3045#0" expanded="false" />
-            <element signature="e#3161#3471#0" expanded="false" />
+            <element signature="e#3242#3553#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -804,7 +764,6 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#0#15#0" expanded="true" />
             <element signature="e#110#302#0" expanded="false" />
           </folding>
         </state>
@@ -816,16 +775,8 @@
           <caret line="142" column="0" selection-start-line="142" selection-start-column="0" selection-end-line="142" selection-end-column="0" />
           <folding>
             <element signature="e#28#43#0" expanded="true" />
-            <element signature="e#2579#3045#0" expanded="false" />
-            <element signature="e#3161#3471#0" expanded="false" />
+            <element signature="e#3242#3553#0" expanded="false" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/c432-mux4-1.v">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -835,16 +786,8 @@
           <caret line="142" column="0" selection-start-line="142" selection-start-column="0" selection-end-line="142" selection-end-column="0" />
           <folding>
             <element signature="e#28#43#0" expanded="true" />
-            <element signature="e#2579#3045#0" expanded="false" />
-            <element signature="e#3161#3471#0" expanded="false" />
+            <element signature="e#3242#3553#0" expanded="false" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/c432-mux4-1.v">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -860,7 +803,6 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="25" column="40" selection-start-line="25" selection-start-column="40" selection-end-line="25" selection-end-column="40" />
           <folding>
-            <element signature="e#0#15#0" expanded="true" />
             <element signature="e#110#302#0" expanded="false" />
           </folding>
         </state>
@@ -872,8 +814,7 @@
           <caret line="172" column="0" selection-start-line="172" selection-start-column="0" selection-end-line="172" selection-end-column="0" />
           <folding>
             <element signature="e#28#43#0" expanded="true" />
-            <element signature="e#2579#3045#0" expanded="false" />
-            <element signature="e#3161#3471#0" expanded="false" />
+            <element signature="e#3242#3553#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -890,7 +831,6 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="27" column="0" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
           <folding>
-            <element signature="e#0#15#0" expanded="true" />
             <element signature="e#110#302#0" expanded="false" />
           </folding>
         </state>
@@ -917,8 +857,7 @@
           <caret line="157" column="0" selection-start-line="157" selection-start-column="0" selection-end-line="157" selection-end-column="0" />
           <folding>
             <element signature="e#28#43#0" expanded="true" />
-            <element signature="e#2579#3045#0" expanded="false" />
-            <element signature="e#3161#3471#0" expanded="false" />
+            <element signature="e#3242#3553#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -935,7 +874,6 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="80" column="17" selection-start-line="80" selection-start-column="17" selection-end-line="80" selection-end-column="17" />
           <folding>
-            <element signature="e#0#15#0" expanded="true" />
             <element signature="e#110#302#0" expanded="false" />
           </folding>
         </state>
@@ -961,7 +899,6 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="31" column="0" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="32" />
           <folding>
-            <element signature="e#0#15#0" expanded="true" />
             <element signature="e#110#302#0" expanded="false" />
           </folding>
         </state>
@@ -979,7 +916,6 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="88" column="18" selection-start-line="88" selection-start-column="18" selection-end-line="88" selection-end-column="18" />
           <folding>
-            <element signature="e#0#15#0" expanded="true" />
             <element signature="e#110#302#0" expanded="false" />
           </folding>
         </state>
@@ -1006,25 +942,20 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/EXE_circuitScanner.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.63596493">
-          <caret line="101" column="26" selection-start-line="101" selection-start-column="26" selection-end-line="101" selection-end-column="26" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/c432-mux4-1.v">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/pair_check">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wire_CircuitScanner.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="1.0292096">
+          <caret line="84" column="0" selection-start-line="84" selection-start-column="0" selection-end-line="84" selection-end-column="0" />
+          <folding>
+            <element signature="e#110#302#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1036,40 +967,45 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/c17-abcmap-fmt.v">
+    <entry file="file://$PROJECT_DIR$/c432-abcmap-fmt.v">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.18376723">
-          <caret line="8" column="28" selection-start-line="0" selection-start-column="0" selection-end-line="10" selection-end-column="9" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/wire_CircuitScanner.py">
+    <entry file="file://$PROJECT_DIR$/EXE_circuitScanner.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="86" column="0" selection-start-line="86" selection-start-column="0" selection-end-line="86" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#15#0" expanded="true" />
-            <element signature="e#110#302#0" expanded="false" />
-          </folding>
+          <caret line="101" column="26" selection-start-line="101" selection-start-column="26" selection-end-line="101" selection-end-column="26" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/DummyWire.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="181" column="0" selection-start-line="181" selection-start-column="0" selection-end-line="181" selection-end-column="0" />
+          <caret line="97" column="89" selection-start-line="97" selection-start-column="89" selection-end-line="97" selection-end-column="89" />
           <folding>
             <element signature="e#28#43#0" expanded="true" />
-            <element signature="e#2579#3045#0" expanded="false" />
-            <element signature="e#3161#3471#0" expanded="false" />
+            <element signature="e#3242#3553#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/c432-abcmap-fmt.v">
+    <entry file="file://$PROJECT_DIR$/c432-abcmap-fmt-WIRE-1.v">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/c432-abcmap-fmt-WIRE-10.v">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.024311183">
+          <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
           <folding />
         </state>
       </provider>
