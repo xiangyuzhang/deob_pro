@@ -56,13 +56,21 @@ def find_backup_Mux_in(circuitIn):
 
     for line in Vlines:
         line = line.replace('\n', '')
-        if 'input' in line:
-            if '//RE_' in line:
-                line = line[:line.find('//RE_')]
-            PIs=re.search(r'(?<=input )(.*)(?=$)', line).group().replace(' ','').split(',')
+
+#        if 'input' in line:
+#            if '//RE_' in line:
+#                line = line[:line.find('//RE_')]
+#            PIs=re.search(r'(?<=input )(.*)(?=$)', line).group().replace(' ','').split(',')
+#            for pi in PIs:
+#                pi = pi.replace('\\','').replace('[','').replace(']','')
+#                result.append(pi)
+
+        if 'wire' in line:
+            PIs=re.search(r'(?<=wire )(.*)(?=$)', line).group().replace(' ','').split(',')
             for pi in PIs:
                 pi = pi.replace('\\','').replace('[','').replace(']','')
                 result.append(pi)
+
     return result
 #   return list result['N12','N23','N1234','N6723']
 
@@ -71,7 +79,7 @@ def random_sequence_generator(limit_num, select_range):
 
     random_counter = 1
     random.random()
-#    random.seed(1)
+    random.seed(1)
     random_sequence = []
     while random_counter < limit_num:
         temp = random.randint(0, select_range-1)
@@ -95,7 +103,7 @@ def camouflage_builder(target_pair, back_up_MUX_in, seed, programbit, output):
 
     this_gate_out_net = target_pair.out_netName
     random_sequence = random_sequence_generator(4, len(back_up_MUX_in))
-    result = abcmap_MUX_OBF_netlist(back_up_MUX_in[random_sequence[0]], this_gate_out_net, back_up_MUX_in[random_sequence[2]], this_gate_out_net,output,seed,programbit)
+    result = abcmap_MUX_OBF_netlist(back_up_MUX_in[random_sequence[0]], back_up_MUX_in[random_sequence[1]], back_up_MUX_in[random_sequence[2]], this_gate_out_net,output,seed,programbit)
 
 
     return result

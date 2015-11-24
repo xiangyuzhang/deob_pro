@@ -41,7 +41,7 @@ def CircuitScanner(circuitIn, Num_pair):
     has_next_gate = False
     random_sequence = []
     random_counter = 0
-    #random.seed(1)
+    random.seed(1)
     counter = 0
     i = 0
 
