@@ -88,23 +88,40 @@ def levelizer(circuit):
 #                 print "inqueue2: ", temp
 #         print "\t---------------------------------------------"
 
+def generate_result(circuit):
+    level_marker = 1
+    max_level = 1
+    result = []
+    for node in circuit.nodes(data = True):
+        if node[1]["level"] >= max_level:
+            max_level = node[1]["level"]
+    for i in range(1, max_level + 1):
+        dict = {level_marker : []}
+        for node in circuit.nodes(data = True):
+            if node[1]["level"] == level_marker:
+                dict[level_marker].append(node[0])
+        level_marker += 1
+        result.append(dict)
+    return result
 
 
+def levelizer(path):
+    circuit = nx.DiGraph()
+    level_marker = 1  # used to mark the current level while output
+    with open(path, "r") as infile:
+        Vline = infile.read().split(";")
 
-circuit = nx.DiGraph()
-with open("c17-abcmap-fmt.v", "r") as infile:
-    Vline = infile.read().split(";")
+    for line in Vline:
+        line = line.strip("\n")
+        if "input" in line:
+            input_initializer(line, circuit)
+        if line != '' and '/' not in 'module' not in line and 'input' not in line and 'output' not in line and 'wire' not in line and 'endmodule' not in line:
+            gate_scaner(line,circuit)
 
-for line in Vline:
-    line = line.strip("\n")
-    if "input" in line:
-        input_initializer(line, circuit)
-    if line != '' and '/' not in 'module' not in line and 'input' not in line and 'output' not in line and 'wire' not in line and 'endmodule' not in line:
-        gate_scaner(line,circuit)
-
-# checker(circuit)
-levelizer(circuit)
-checker(circuit)
-
+    # checker(circuit)
+    levelizer(circuit)
+    # checker(circuit)
+    print generate_result(circuit)
+    return generate_result(circuit)
 
 
