@@ -1,5 +1,6 @@
 __author__ = 'xiangyuzhang'
 from networkx import nx
+
 import re
 
 def add_edge(circuit, input, output):   # add edge and also initialize type = else and level = -1
