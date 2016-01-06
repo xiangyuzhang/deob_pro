@@ -5,7 +5,7 @@ import os
 import re
 import random
 from wire_CircuitScanner import CircuitScanner
-
+from Levelizer import levelization, find_key
 
 def abcmap_MUX_OBF_netlist(pi1, pi2, pi3, pi4, output, seed, programbit):
     D_bit1 = 'D_' + str(programbit)
@@ -46,6 +46,15 @@ def abcmap_MUX_OBF_netlist(pi1, pi2, pi3, pi4, output, seed, programbit):
 # seed is the initial index for wires
 # program bit is the initial index for CBs
 # return [new_netlist, wire, CB, output]
+def find_backup_Mux_in_level(levelization_result, original_net):
+    result = []
+
+    max_level = len(levelization_result)
+    level = find_key(original_net,levelization_result)   # level is the level for selected pair
+    index = level - 1 # levelization_result is a list with all element to be dict, so the index means the index of the corresponding level
+    for i in range(0, index):
+        result.extend(levelization_result[i].get(i + 1))
+    return result
 
 
 def find_backup_Mux_in(circuitIn):
@@ -57,19 +66,19 @@ def find_backup_Mux_in(circuitIn):
     for line in Vlines:
         line = line.replace('\n', '')
 
-#        if 'input' in line:
-#            if '//RE_' in line:
-#                line = line[:line.find('//RE_')]
-#            PIs=re.search(r'(?<=input )(.*)(?=$)', line).group().replace(' ','').split(',')
-#            for pi in PIs:
-#                pi = pi.replace('\\','').replace('[','').replace(']','')
-#                result.append(pi)
-
-        if 'wire' in line:
-            PIs=re.search(r'(?<=wire )(.*)(?=$)', line).group().replace(' ','').split(',')
+        if 'input' in line:
+            if '//RE_' in line:
+                line = line[:line.find('//RE_')]
+            PIs=re.search(r'(?<=input )(.*)(?=$)', line).group().replace(' ','').split(',')
             for pi in PIs:
                 pi = pi.replace('\\','').replace('[','').replace(']','')
                 result.append(pi)
+
+#        if 'wire' in line:
+#            PIs=re.search(r'(?<=wire )(.*)(?=$)', line).group().replace(' ','').split(',')
+#            for pi in PIs:
+#                pi = pi.replace('\\','').replace('[','').replace(']','')
+#                result.append(pi)
 
     return result
 #   return list result['N12','N23','N1234','N6723']
@@ -143,9 +152,11 @@ if not os.path.isfile(CircuitPath):
 # pair_list generator
 pair_list= CircuitScanner(CircuitPath, Num_pair)
 # get back up MUX_in
-back_up_MUX_in = find_backup_Mux_in(circuitIn)
+####### back_up_MUX_in = find_backup_Mux_in(circuitIn)
 # MUX builder
+level_result = levelization(circuitIn)
 for target_pair in pair_list:
+    back_up_MUX_in = find_backup_Mux_in_level(level_result,target_pair.out_netName)
     camouflage_gates = camouflage_builder(target_pair, back_up_MUX_in, seed, programbit, 'MUX_O_' + str(MUX_O_index))
     new_netlist.append(camouflage_gates[0])         # result 1: MUX new_netlist
     new_wires.append(camouflage_gates[1])       # result 2: MUX new_wire

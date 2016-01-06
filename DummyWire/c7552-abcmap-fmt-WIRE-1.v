@@ -1,6 +1,4 @@
 
-
-
 module c7552 (N1,N5,N9,N12,N15,N18,N23,N26,N29,N32,
               N35,N38,N41,N44,N47,N50,N53,N54,N55,N56,
               N57,N58,N59,N60,N61,N62,N63,N64,N65,N66,
@@ -1144,7 +1142,7 @@ or2 gate728( .a(N2930), .b(N2328), .O(N3322) );
 or2 gate729( .a(N2931), .b(N2329), .O(N3328) );
 or2 gate730( .a(N2932), .b(N2330), .O(N3334) );
 or2 gate731( .a(N2934), .b(N2343), .O(N3340) );
-or2 gate732( .a(N2935), .b(N2344), .O(N3343) );
+or2 gate732( .a(N2935), .b(MUX_O_0), .O(N3343) );
 or2 gate733( .a(N2936), .b(N2345), .O(N3349) );
 or2 gate734( .a(N2937), .b(N2346), .O(N3355) );
 and2 gate735( .a(N2761), .b(N2478), .O(N3361) );
@@ -1754,7 +1752,7 @@ nand2 gate1338( .a(N3709), .b(N4626), .O(N5298) );
 nand2 gate1339( .a(N3718), .b(N4627), .O(N5299) );
 nand2 gate1340( .a(N3715), .b(N4628), .O(N5300) );
 nand2 gate1341( .a(N3739), .b(N4643), .O(N5314) );
-nand2 gate1342( .a(N3736), .b(MUX_O_0), .O(N5315) );
+nand2 gate1342( .a(N3736), .b(N4644), .O(N5315) );
 nand2 gate1343( .a(N3745), .b(N4645), .O(N5316) );
 nand2 gate1344( .a(N3742), .b(N4646), .O(N5317) );
 nand2 gate1345( .a(N3751), .b(N4647), .O(N5318) );
@@ -3928,14 +3926,14 @@ inv1 gate3512( .a(N11341), .O(N11342) );
 buf1 gate3513( .a(N241_I), .O(N241_O) );
 inv1 gate( .a(D_0),.O(D_0_NOT) );
 inv1 gate( .a(D_1),.O(D_1_NOT) );
-and2 gate( .a(N214), .b(D_0_NOT), .O(ED_0) );
-and2 gate( .a(N271), .b(D_0_NOT), .O(ED_1) );
-and2 gate( .a(N127), .b(D_0), .O(ED_2) );
-and2 gate( .a(N4644), .b(D_0), .O(ED_3) );
-and2 gate( .a(ED_0), .b(D_1_NOT), .O(ED_4) );
-and2 gate( .a(ED_1), .b(D_1), .O(ED_5) );
-and2 gate( .a(ED_2), .b(D_1_NOT), .O(ED_6) );
-and2 gate( .a(ED_3), .b(D_1), .O(ED_7) );
+and2 gate( .a(N2399), .b(D_0_NOT), .O(ED_0) );
+and2 gate( .a(N10242), .b(D_0_NOT), .O(ED_1) );
+and2 gate( .a(N9660), .b(D_0), .O(ED_2) );
+and2 gate( .a(N2344), .b(D_0), .O(ED_3) );
+and2 gate( .a(ED_0), .b(D_1_NOT), .O(ED_9) );
+and2 gate( .a(ED_1), .b(D_1), .O(ED_7) );
+and2 gate( .a(ED_2), .b(D_1_NOT), .O(ED_5) );
+and2 gate( .a(ED_3), .b(D_1), .O(ED_4) );
 or2  gate( .a(ED_4), .b(ED_5), .O(ED_6) );
 or2  gate( .a(ED_6), .b(ED_7), .O(ED_8) );
 or2  gate( .a(ED_9), .b(ED_8), .O(MUX_O_0) );
